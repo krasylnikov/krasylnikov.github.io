@@ -1,0 +1,55 @@
+required:
+  - cmd
+  - token
+  - device_id
+properties:
+  cmd:
+    type: string
+    description: "Command code."
+    enum:
+      - set_info
+  account_token: 
+    description: "Account auth token."
+    type: string
+  token:
+    description: "JuiceNet device auth token."
+    type: string
+  device_id: 
+    type: string
+    description: "Mobile device ID."
+  name:
+    type: string
+    description: "JuiceNet device user defined name."
+  zip:
+    type: string
+    description: "zip code of the place, where JuiceNet device located."
+  country_code:
+    type: string
+  IP:
+    type: string
+    description: "IP address the request was performed from."
+  gascost:
+    type: number
+  mpg:
+    type: number
+  ecost:
+    type: number
+  whpermile:
+    type: number
+  timeZoneId:
+    type: string
+  amps_wire_rating:
+    type: number
+  amps_unit_rating:
+    type: number
+  info_timestamp:
+    type: number
+  garage_id:
+    type: string
+  cars:
+    type: array
+    items:
+      $ref: "#/definitions/car"
+  policy:
+    $ref: "#/definitions/policy"
+type: object

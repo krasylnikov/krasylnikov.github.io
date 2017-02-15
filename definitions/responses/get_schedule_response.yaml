@@ -1,0 +1,15 @@
+properties:
+    success:
+        type: boolean
+    ID:
+        type: string
+        description: "JuiceNet device ID"
+    info_timestamp:
+        type: number
+    type:
+        type: string
+    weekday:
+        $ref: "#/definitions/schedule_day"
+    weekend:
+        $ref: "#/definitions/schedule_day"
+type: object

@@ -1,0 +1,22 @@
+properties:
+  success:
+    type: boolean
+  caller_ip:
+    type: string
+    description: "The caller IP address."
+  version_api:
+    properties:
+      _Major:
+        type: number
+      _Minor:
+        type: number
+      _Build:
+        type: number
+      _Revision:
+        type: number
+    type: object
+  version_car_model_db:
+    type: string
+  default_car_model:
+    $ref: "#/definitions/car_model"
+type: object

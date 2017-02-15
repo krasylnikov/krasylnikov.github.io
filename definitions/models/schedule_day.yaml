@@ -1,0 +1,8 @@
+properties:
+  start:
+    type: number
+  end:
+    type: number
+  car_ready_by:
+    type: number
+type: object

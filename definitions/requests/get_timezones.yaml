@@ -1,0 +1,10 @@
+get_timezones:
+  required:
+    - cmd
+  properties:
+    cmd:
+        type: string
+        description: "Command code."
+        enum:
+          - get_timezones
+  type: object

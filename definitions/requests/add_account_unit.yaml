@@ -1,0 +1,21 @@
+    required:
+      - cmd
+      - device_id
+      - account_token
+      - token
+    properties:
+      cmd: 
+        type: string
+        description: "Command code."
+        enum: 
+          - add_account_unit
+      account_token: 
+        description: "Auth token."
+        type: string
+      device_id: 
+        type: string
+        description: "Mobile device ID."
+      token: 
+        description: "Charger token."
+        type: string
+    type: object

@@ -1,0 +1,26 @@
+    required:
+      - cmd
+      - token
+      - device_id
+      - info
+    properties:
+      cmd:
+        type: string
+        description: "Command code."
+        enum:
+          - select_car
+      account_token: 
+        description: "Account auth token."
+        type: string
+      token:
+        description: "JuiceNet device auth token."
+        type: string
+      device_id: 
+        type: string
+        description: "Mobile device ID."
+      info:
+        type: object
+        properties:
+          car_id:
+            type: number
+    type: object

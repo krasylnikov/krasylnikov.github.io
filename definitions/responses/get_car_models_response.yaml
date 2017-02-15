@@ -1,0 +1,10 @@
+properties:
+    success:
+        type: boolean
+    version:
+        type: string
+    models:
+        type: array
+        items:
+            $ref: "#/definitions/car_model"
+type: object

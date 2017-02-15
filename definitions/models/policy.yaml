@@ -1,0 +1,8 @@
+properties:
+  name:
+    type: string
+  user_control_allowed:
+    type: boolean
+  charge_control_type:
+    type: string
+type: object

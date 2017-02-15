@@ -1,0 +1,2859 @@
+var emw_api = {
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.1",
+        "title": "Mobile app to web dashboard connection API"
+    },
+    "basePath": "/box_api_secure",
+    "schemes": [
+        "https"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/get_server_info": {
+            "post": {
+                "tags": [
+                    "box_pin"
+                ],
+                "description": "Get info about the server.",
+                "parameters": [
+                    {
+                        "description": "Command.",
+                        "in": "body",
+                        "name": "cmd",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/get_server_info"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Response.",
+                        "schema": {
+                            "$ref": "#/definitions/get_servrer_info_response"
+                        }
+                    }
+                }
+            }
+        },
+        "/get_timezones": {
+            "post": {
+                "tags": [
+                    "box_pin"
+                ],
+                "description": "Get timezones list.",
+                "parameters": [
+                    {
+                        "description": "Command.",
+                        "in": "body",
+                        "name": "cmd",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/get_timezones"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Response.",
+                        "schema": {
+                            "$ref": "#/definitions/get_timezones_response"
+                        }
+                    }
+                }
+            }
+        },
+        "/get_car_models": {
+            "post": {
+                "tags": [
+                    "box_pin"
+                ],
+                "description": "Get car models list.",
+                "parameters": [
+                    {
+                        "description": "Command.",
+                        "in": "body",
+                        "name": "cmd",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/get_car_models"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Response.",
+                        "schema": {
+                            "$ref": "#/definitions/get_car_models_response"
+                        }
+                    }
+                }
+            }
+        },
+        "/logout": {
+            "post": {
+                "tags": [
+                    "box_pin"
+                ],
+                "description": "Invalidate current account_token and all associations with it.",
+                "parameters": [
+                    {
+                        "description": "Command to invalidate the current account_token.",
+                        "in": "body",
+                        "name": "cmd",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/logout"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Response.",
+                        "schema": {
+                            "$ref": "#/definitions/success_response"
+                        }
+                    }
+                }
+            }
+        },
+        "/get_account_units": {
+            "post": {
+                "tags": [
+                    "box_pin"
+                ],
+                "description": "Get units list available for account.",
+                "parameters": [
+                    {
+                        "description": "Command.",
+                        "in": "body",
+                        "name": "cmd",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/get_account_units"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Response.",
+                        "schema": {
+                            "$ref": "#/definitions/get_account_units_response"
+                        }
+                    }
+                }
+            }
+        },
+        "/check_device": {
+            "post": {
+                "tags": [
+                    "box_pin"
+                ],
+                "description": "Check if JuiceNet device is available.",
+                "parameters": [
+                    {
+                        "description": "Command.",
+                        "in": "body",
+                        "name": "cmd",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/check_device"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Response.",
+                        "schema": {
+                            "$ref": "#/definitions/check_device_response"
+                        }
+                    }
+                }
+            }
+        },
+        "/pair_device": {
+            "post": {
+                "tags": [
+                    "box_pin"
+                ],
+                "description": "Pair JuiceNet device with mobile device.",
+                "parameters": [
+                    {
+                        "description": "Command.",
+                        "in": "body",
+                        "name": "cmd",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/pair_device"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Response.",
+                        "schema": {
+                            "$ref": "#/definitions/pair_device_response"
+                        }
+                    }
+                }
+            }
+        },
+        "/reset_pin": {
+            "post": {
+                "tags": [
+                    "box_pin"
+                ],
+                "description": "Reset JuiceNet device password.",
+                "parameters": [
+                    {
+                        "description": "Command.",
+                        "in": "body",
+                        "name": "cmd",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/reset_pin"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Response.",
+                        "schema": {
+                            "$ref": "#/definitions/reset_pin_response"
+                        }
+                    }
+                }
+            }
+        },
+        "/add_unit": {
+            "post": {
+                "tags": [
+                    "box_pin"
+                ],
+                "description": "Try to add JuiceNet device to the account.",
+                "parameters": [
+                    {
+                        "description": "Command to add JuiceNet device to the account",
+                        "in": "body",
+                        "name": "cmd",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/add_unit"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Response.",
+                        "schema": {
+                            "$ref": "#/definitions/add_unit_response"
+                        }
+                    }
+                }
+            }
+        },
+        "/share_device": {
+            "post": {
+                "tags": [
+                    "box_pin"
+                ],
+                "description": "Share device by pin.",
+                "parameters": [
+                    {
+                        "description": "Command to add JuiceNet device to the account",
+                        "in": "body",
+                        "name": "cmd",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/share_device"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Response.",
+                        "schema": {
+                            "$ref": "#/definitions/share_device_response"
+                        }
+                    }
+                }
+            }
+        },
+        "/reset_ownership": {
+            "post": {
+                "tags": [
+                    "box_pin"
+                ],
+                "description": "Reset JBox ownership.",
+                "parameters": [
+                    {
+                        "description": "Command to add JuiceNet device to the account",
+                        "in": "body",
+                        "name": "cmd",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/reset_ownership"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Response.",
+                        "schema": {
+                            "$ref": "#/definitions/reset_ownership_response"
+                        }
+                    }
+                }
+            }
+        },
+        "/register_pushes": {
+            "post": {
+                "tags": [
+                    "box_pin"
+                ],
+                "description": "Register for push notifications.",
+                "parameters": [
+                    {
+                        "description": "Command.",
+                        "in": "body",
+                        "name": "cmd",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/register_pushes"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Response.",
+                        "schema": {
+                            "$ref": "#/definitions/success_response"
+                        }
+                    }
+                }
+            }
+        },
+        "/get_info": {
+            "post": {
+                "tags": [
+                    "box_api_secure"
+                ],
+                "description": "Get infro about JuiceNet device.",
+                "parameters": [
+                    {
+                        "description": "Get device info command",
+                        "in": "body",
+                        "name": "cmd",
+                        "schema": {
+                            "$ref": "#/definitions/get_info"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Device info.",
+                        "schema": {
+                            "$ref": "#/definitions/get_info_response"
+                        }
+                    }
+                }
+            }
+        },
+        "/set_info": {
+            "post": {
+                "tags": [
+                    "box_api_secure"
+                ],
+                "description": "Update info about JuiceNet device.",
+                "parameters": [
+                    {
+                        "description": "Set info about JuiceNet device.",
+                        "in": "body",
+                        "name": "cmd",
+                        "schema": {
+                            "$ref": "#/definitions/set_info"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Device info.",
+                        "schema": {
+                            "$ref": "#/definitions/get_info_response"
+                        }
+                    }
+                }
+            }
+        },
+        "/get_state": {
+            "post": {
+                "tags": [
+                    "box_api_secure"
+                ],
+                "description": "Get the current device state.",
+                "parameters": [
+                    {
+                        "description": "Get devices list command object.",
+                        "in": "body",
+                        "name": "cmd",
+                        "schema": {
+                            "$ref": "#/definitions/get_state"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Device state.",
+                        "schema": {
+                            "$ref": "#/definitions/get_state_response"
+                        }
+                    }
+                }
+            }
+        },
+        "/set_override": {
+            "post": {
+                "tags": [
+                    "box_api_secure"
+                ],
+                "description": "Set charge parameters for JuiceNet device.",
+                "parameters": [
+                    {
+                        "description": "Set override comand object.",
+                        "in": "body",
+                        "name": "cmd",
+                        "schema": {
+                            "$ref": "#/definitions/set_override"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success flag.",
+                        "schema": {
+                            "$ref": "#/definitions/success_response"
+                        }
+                    }
+                }
+            }
+        },
+        "/get_schedule": {
+            "post": {
+                "tags": [
+                    "box_api_secure"
+                ],
+                "description": "Get JuiceNet device charge schedule.",
+                "parameters": [
+                    {
+                        "description": "Get JuiceNet device charge schedule command object.",
+                        "in": "body",
+                        "name": "cmd",
+                        "schema": {
+                            "$ref": "#/definitions/get_schedule"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "JuiceNet device charge schedule.",
+                        "schema": {
+                            "$ref": "#/definitions/get_schedule_response"
+                        }
+                    }
+                }
+            }
+        },
+        "/set_schedule": {
+            "post": {
+                "tags": [
+                    "box_api_secure"
+                ],
+                "description": "Set JuiceNet device charge schedule.",
+                "parameters": [
+                    {
+                        "description": "Set JuiceNet device charge schedule command object.",
+                        "in": "body",
+                        "name": "cmd",
+                        "schema": {
+                            "$ref": "#/definitions/set_schedule"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success flag.",
+                        "schema": {
+                            "$ref": "#/definitions/success_response"
+                        }
+                    }
+                }
+            }
+        },
+        "/get_notifications": {
+            "post": {
+                "tags": [
+                    "box_api_secure"
+                ],
+                "description": "Get JuiceNet device notifications settings.",
+                "parameters": [
+                    {
+                        "description": "Get JuiceNet device notifications settings command object.",
+                        "in": "body",
+                        "name": "cmd",
+                        "schema": {
+                            "$ref": "#/definitions/get_notifications"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "JuiceNet device notifications settings.",
+                        "schema": {
+                            "$ref": "#/definitions/get_notifications_response"
+                        }
+                    }
+                }
+            }
+        },
+        "/set_notifications": {
+            "post": {
+                "tags": [
+                    "box_api_secure"
+                ],
+                "description": "Set JuiceNet device notifications settings.",
+                "parameters": [
+                    {
+                        "description": "Set JuiceNet device notifications settings command object.",
+                        "in": "body",
+                        "name": "cmd",
+                        "schema": {
+                            "$ref": "#/definitions/set_notifications"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success flag.",
+                        "schema": {
+                            "$ref": "#/definitions/success_response"
+                        }
+                    }
+                }
+            }
+        },
+        "/add_car": {
+            "post": {
+                "tags": [
+                    "box_api_secure"
+                ],
+                "description": "Add a new car.",
+                "parameters": [
+                    {
+                        "description": "Add a new car command object.",
+                        "in": "body",
+                        "name": "cmd",
+                        "schema": {
+                            "$ref": "#/definitions/add_car"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success flag.",
+                        "schema": {
+                            "$ref": "#/definitions/success_response"
+                        }
+                    }
+                }
+            }
+        },
+        "/update_car": {
+            "post": {
+                "tags": [
+                    "box_api_secure"
+                ],
+                "description": "Update car parameters.",
+                "parameters": [
+                    {
+                        "description": "Update car parameters command object.",
+                        "in": "body",
+                        "name": "cmd",
+                        "schema": {
+                            "$ref": "#/definitions/update_car"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success flag.",
+                        "schema": {
+                            "$ref": "#/definitions/success_response"
+                        }
+                    }
+                }
+            }
+        },
+        "/delete_car": {
+            "post": {
+                "tags": [
+                    "box_api_secure"
+                ],
+                "description": "Delete a car.",
+                "parameters": [
+                    {
+                        "description": "Delete a car command object.",
+                        "in": "body",
+                        "name": "cmd",
+                        "schema": {
+                            "$ref": "#/definitions/delete_car"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success flag.",
+                        "schema": {
+                            "$ref": "#/definitions/success_response"
+                        }
+                    }
+                }
+            }
+        },
+        "/select_car": {
+            "post": {
+                "tags": [
+                    "box_api_secure"
+                ],
+                "description": "Select a car.",
+                "parameters": [
+                    {
+                        "description": "Select a car command object.",
+                        "in": "body",
+                        "name": "cmd",
+                        "schema": {
+                            "$ref": "#/definitions/select_car"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success flag.",
+                        "schema": {
+                            "$ref": "#/definitions/success_response"
+                        }
+                    }
+                }
+            }
+        },
+        "/set_garage": {
+            "post": {
+                "tags": [
+                    "box_api_secure"
+                ],
+                "description": "Set the current device garage.",
+                "parameters": [
+                    {
+                        "description": "Set the current device garage command object.",
+                        "in": "body",
+                        "name": "cmd",
+                        "schema": {
+                            "$ref": "#/definitions/set_garage"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success flag.",
+                        "schema": {
+                            "$ref": "#/definitions/success_response"
+                        }
+                    }
+                }
+            }
+        },
+        "/get_history": {
+            "post": {
+                "tags": [
+                    "box_api_secure"
+                ],
+                "description": "Get charge sessions history.",
+                "parameters": [
+                    {
+                        "description": "Get charge sessions history command object.",
+                        "in": "body",
+                        "name": "cmd",
+                        "schema": {
+                            "$ref": "#/definitions/get_history"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Charging session list.",
+                        "schema": {
+                            "$ref": "#/definitions/get_history_response"
+                        }
+                    }
+                }
+            }
+        },
+        "/get_plot": {
+            "post": {
+                "tags": [
+                    "box_api_secure"
+                ],
+                "description": "Get plot data for charging session.",
+                "parameters": [
+                    {
+                        "description": "Get plot data for charging session command object.",
+                        "in": "body",
+                        "name": "cmd",
+                        "schema": {
+                            "$ref": "#/definitions/get_plot"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Charging session list.",
+                        "schema": {
+                            "$ref": "#/definitions/get_plot_response"
+                        }
+                    }
+                }
+            }
+        },
+        "/get_utilitybill_url": {
+            "post": {
+                "tags": [
+                    "box_api_secure"
+                ],
+                "description": "Get the URL to upload image.",
+                "parameters": [
+                    {
+                        "description": "Get the image upload URL command.",
+                        "in": "body",
+                        "name": "cmd",
+                        "schema": {
+                            "$ref": "#/definitions/get_utilitybill_url"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Charging session list.",
+                        "schema": {
+                            "$ref": "#/definitions/get_utilitybill_url_response"
+                        }
+                    }
+                }
+            }
+        },
+        "/get_program_signup_info": {
+            "post": {
+                "tags": [
+                    "box_api_secure"
+                ],
+                "description": "Get rewards program signup info.",
+                "parameters": [
+                    {
+                        "description": "Get rewards program signup info command object.",
+                        "in": "body",
+                        "name": "cmd",
+                        "schema": {
+                            "$ref": "#/definitions/get_program_signup_info"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Charging session list.",
+                        "schema": {
+                            "$ref": "#/definitions/get_program_signup_info_response"
+                        }
+                    }
+                }
+            }
+        },
+        "/set_program_signup_info": {
+            "post": {
+                "tags": [
+                    "box_api_secure"
+                ],
+                "description": "Set rewards program signup info.",
+                "parameters": [
+                    {
+                        "description": "Add JuiceNet device to dashboard command object.",
+                        "in": "body",
+                        "name": "cmd",
+                        "schema": {
+                            "$ref": "#/definitions/set_program_signup_info"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success flag.",
+                        "schema": {
+                            "$ref": "#/definitions/success_response"
+                        }
+                    }
+                }
+            }
+        },
+        "/add_account_unit": {
+            "post": {
+                "tags": [
+                    "box_api_secure"
+                ],
+                "description": "Add JuiceNet device to dashboard.",
+                "parameters": [
+                    {
+                        "description": "Add JuiceNet device to dashboard command object.",
+                        "in": "body",
+                        "name": "cmd",
+                        "schema": {
+                            "$ref": "#/definitions/add_account_unit"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success flag.",
+                        "schema": {
+                            "$ref": "#/definitions/success_response"
+                        }
+                    }
+                }
+            }
+        },
+        "/get_share_pin": {
+            "post": {
+                "tags": [
+                    "box_api_secure"
+                ],
+                "description": "Get the pin to share JBox.",
+                "parameters": [
+                    {
+                        "description": "Get the pin to share JBox.",
+                        "in": "body",
+                        "name": "cmd",
+                        "schema": {
+                            "$ref": "#/definitions/get_share_pin"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Response.",
+                        "schema": {
+                            "$ref": "#/definitions/get_share_pin_response"
+                        }
+                    }
+                }
+            }
+        },
+        "/delete_account_unit": {
+            "post": {
+                "tags": [
+                    "box_api_secure"
+                ],
+                "description": "Delete JuiceNet device from the dashboard.",
+                "parameters": [
+                    {
+                        "description": "Delete JuiceNet device from the dashboard command object.",
+                        "in": "body",
+                        "name": "cmd",
+                        "schema": {
+                            "$ref": "#/definitions/delete_account_unit"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success flag.",
+                        "schema": {
+                            "$ref": "#/definitions/success_response"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "timezone": {
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "display_name": {
+                    "type": "string"
+                },
+                "base_utc_offset": {
+                    "type": "number"
+                },
+                "now_utc_offset": {
+                    "type": "number"
+                },
+                "standard_name": {
+                    "type": "string"
+                },
+                "daylight_name": {
+                    "type": "string"
+                },
+                "supports_daylight": {
+                    "type": "boolean"
+                }
+            },
+            "type": "object"
+        },
+        "plot_point": {
+            "properties": {
+                "t": {
+                    "type": "number",
+                    "description": "Plot point time."
+                },
+                "v": {
+                    "type": "number",
+                    "description": "Plot point value."
+                }
+            },
+            "type": "object"
+        },
+        "session": {
+            "properties": {
+                "id": {
+                    "type": "number",
+                    "description": "The charging session ID."
+                },
+                "time_start": {
+                    "type": "number"
+                },
+                "time_end": {
+                    "type": "number"
+                },
+                "duration": {
+                    "type": "number"
+                },
+                "wh_energy": {
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        },
+        "policy": {
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "user_control_allowed": {
+                    "type": "boolean"
+                },
+                "charge_control_type": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "car": {
+            "properties": {
+                "car_id": {
+                    "type": "number"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "battery_size_wh": {
+                    "type": "number"
+                },
+                "battery_range_m": {
+                    "type": "number"
+                },
+                "charging_rate_w": {
+                    "type": "number"
+                },
+                "model_id": {
+                    "type": "string"
+                },
+                "model_info": {
+                    "$ref": "#/definitions/car_model"
+                }
+            },
+            "type": "object"
+        },
+        "car_images": {
+            "properties": {
+                "charging": {
+                    "type": "string"
+                },
+                "default": {
+                    "type": "string"
+                },
+                "plugged": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "car_model": {
+            "properties": {
+                "model_id": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "make": {
+                    "type": "string"
+                },
+                "model": {
+                    "type": "string"
+                },
+                "year": {
+                    "type": "number"
+                },
+                "range_m": {
+                    "type": "number"
+                },
+                "range_city_m": {
+                    "type": "number"
+                },
+                "range_highway_m": {
+                    "type": "number"
+                },
+                "battery_size_wh": {
+                    "type": "number"
+                },
+                "charging_rate_w": {
+                    "type": "number"
+                },
+                "images": {
+                    "$ref": "#/definitions/car_images"
+                }
+            },
+            "type": "object"
+        },
+        "device": {
+            "properties": {
+                "unit_id": {
+                    "description": "JuiceNet device ID.",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "Charger name.",
+                    "type": "string"
+                },
+                "token": {
+                    "description": "Charger token.",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "set_info": {
+            "required": [
+                "cmd",
+                "token",
+                "device_id"
+            ],
+            "properties": {
+                "cmd": {
+                    "type": "string",
+                    "description": "Command code.",
+                    "enum": [
+                        "set_info"
+                    ]
+                },
+                "account_token": {
+                    "description": "Account auth token.",
+                    "type": "string"
+                },
+                "token": {
+                    "description": "JuiceNet device auth token.",
+                    "type": "string"
+                },
+                "device_id": {
+                    "type": "string",
+                    "description": "Mobile device ID."
+                },
+                "name": {
+                    "type": "string",
+                    "description": "JuiceNet device user defined name."
+                },
+                "zip": {
+                    "type": "string",
+                    "description": "zip code of the place, where JuiceNet device located."
+                },
+                "country_code": {
+                    "type": "string"
+                },
+                "IP": {
+                    "type": "string",
+                    "description": "IP address the request was performed from."
+                },
+                "gascost": {
+                    "type": "number"
+                },
+                "mpg": {
+                    "type": "number"
+                },
+                "ecost": {
+                    "type": "number"
+                },
+                "whpermile": {
+                    "type": "number"
+                },
+                "timeZoneId": {
+                    "type": "string"
+                },
+                "amps_wire_rating": {
+                    "type": "number"
+                },
+                "amps_unit_rating": {
+                    "type": "number"
+                },
+                "info_timestamp": {
+                    "type": "number"
+                },
+                "garage_id": {
+                    "type": "string"
+                },
+                "cars": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/car"
+                    }
+                },
+                "policy": {
+                    "$ref": "#/definitions/policy"
+                }
+            },
+            "type": "object"
+        },
+        "get_info": {
+            "required": [
+                "cmd",
+                "token",
+                "device_id"
+            ],
+            "properties": {
+                "cmd": {
+                    "type": "string",
+                    "description": "Command code.",
+                    "enum": [
+                        "get_info"
+                    ]
+                },
+                "account_token": {
+                    "description": "Account auth token.",
+                    "type": "string"
+                },
+                "token": {
+                    "description": "JuiceNet device auth token.",
+                    "type": "string"
+                },
+                "device_id": {
+                    "type": "string",
+                    "description": "Mobile device ID."
+                }
+            },
+            "type": "object"
+        },
+        "get_info_response": {
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "description": "JuiceNet device user defined name."
+                },
+                "zip": {
+                    "type": "string",
+                    "description": "zip code of the place, where JuiceNet device located."
+                },
+                "country_code": {
+                    "type": "string"
+                },
+                "IP": {
+                    "type": "string",
+                    "description": "IP address the request was performed from."
+                },
+                "gascost": {
+                    "type": "number"
+                },
+                "mpg": {
+                    "type": "number"
+                },
+                "ecost": {
+                    "type": "number"
+                },
+                "whpermile": {
+                    "type": "number"
+                },
+                "timeZoneId": {
+                    "type": "string"
+                },
+                "amps_wire_rating": {
+                    "type": "number"
+                },
+                "amps_unit_rating": {
+                    "type": "number"
+                },
+                "info_timestamp": {
+                    "type": "number"
+                },
+                "garage_id": {
+                    "type": "string"
+                },
+                "cars": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/car"
+                    }
+                },
+                "policy": {
+                    "$ref": "#/definitions/policy"
+                }
+            },
+            "type": "object"
+        },
+        "get_state": {
+            "required": [
+                "cmd",
+                "token",
+                "device_id"
+            ],
+            "properties": {
+                "cmd": {
+                    "type": "string",
+                    "description": "Command code.",
+                    "enum": [
+                        "get_state"
+                    ]
+                },
+                "account_token": {
+                    "description": "Account auth token.",
+                    "type": "string"
+                },
+                "token": {
+                    "description": "JuiceNet device auth token.",
+                    "type": "string"
+                },
+                "device_id": {
+                    "type": "string",
+                    "description": "Mobile device ID."
+                }
+            },
+            "type": "object"
+        },
+        "get_state_response": {
+            "properties": {
+                "ID": {
+                    "type": "string",
+                    "description": "JuiceNet device ID."
+                },
+                "info_timestamp": {
+                    "type": "number"
+                },
+                "show_override": {
+                    "type": "boolean"
+                },
+                "state": {
+                    "type": "string",
+                    "description": "JuiceNet device state (i.e. 'plugged', 'charging', etc.)",
+                    "enum": [
+                        "unknown",
+                        "error",
+                        "disconnect",
+                        "standby",
+                        "plugged",
+                        "charging"
+                    ]
+                },
+                "charging": {
+                    "properties": {
+                        "amps_limit": {
+                            "type": "number"
+                        },
+                        "amps_current": {
+                            "type": "number"
+                        },
+                        "voltage": {
+                            "type": "number"
+                        },
+                        "wh_energy": {
+                            "type": "number"
+                        },
+                        "savings": {
+                            "type": "number"
+                        },
+                        "watt_power": {
+                            "type": "number"
+                        },
+                        "seconds_charging": {
+                            "type": "number"
+                        },
+                        "wh_energy_at_plugin": {
+                            "type": "number"
+                        },
+                        "wh_energy_to_add": {
+                            "type": "number"
+                        },
+                        "flags": {
+                            "type": "number"
+                        },
+                        "co2": {
+                            "$ref": "#/definitions/co2"
+                        }
+                    },
+                    "type": "object"
+                },
+                "lifetime": {
+                    "properties": {
+                        "wh_energy": {
+                            "type": "number"
+                        },
+                        "savings": {
+                            "type": "number"
+                        },
+                        "co2": {
+                            "$ref": "#/definitions/co2"
+                        }
+                    },
+                    "type": "object"
+                },
+                "charging_time_left": {
+                    "type": "number"
+                },
+                "plug_unplug_time": {
+                    "type": "number"
+                },
+                "target_time": {
+                    "type": "number"
+                },
+                "override_time": {
+                    "type": "number"
+                },
+                "default_target_time": {
+                    "type": "number"
+                },
+                "time_last_ping": {
+                    "type": "number"
+                },
+                "utc_time": {
+                    "type": "number"
+                },
+                "unit_time": {
+                    "type": "number"
+                },
+                "update_interval": {
+                    "type": "number"
+                },
+                "temperature": {
+                    "type": "number"
+                },
+                "frequency": {
+                    "type": "number"
+                },
+                "message": {
+                    "type": "string"
+                },
+                "triggers_all": {
+                    "type": "number"
+                },
+                "triggers_blocking": {
+                    "type": "number"
+                },
+                "car_id": {
+                    "type": "number"
+                },
+                "success": {
+                    "type": "boolean"
+                }
+            },
+            "type": "object"
+        },
+        "get_schedule": {
+            "required": [
+                "cmd",
+                "token",
+                "device_id"
+            ],
+            "properties": {
+                "cmd": {
+                    "type": "string",
+                    "description": "Command code.",
+                    "enum": [
+                        "get_schedule"
+                    ]
+                },
+                "account_token": {
+                    "description": "Account auth token.",
+                    "type": "string"
+                },
+                "token": {
+                    "description": "JuiceNet device auth token.",
+                    "type": "string"
+                },
+                "device_id": {
+                    "type": "string",
+                    "description": "Mobile device ID."
+                }
+            },
+            "type": "object"
+        },
+        "get_schedule_response": {
+            "properties": {
+                "success": {
+                    "type": "boolean"
+                },
+                "ID": {
+                    "type": "string",
+                    "description": "JuiceNet device ID"
+                },
+                "info_timestamp": {
+                    "type": "number"
+                },
+                "type": {
+                    "type": "string"
+                },
+                "weekday": {
+                    "$ref": "#/definitions/schedule_day"
+                },
+                "weekend": {
+                    "$ref": "#/definitions/schedule_day"
+                }
+            },
+            "type": "object"
+        },
+        "set_schedule": {
+            "properties": {
+                "cmd": {
+                    "type": "string",
+                    "description": "Command code.",
+                    "enum": [
+                        "set_schedule"
+                    ]
+                },
+                "account_token": {
+                    "description": "Account auth token.",
+                    "type": "string"
+                },
+                "token": {
+                    "description": "JuiceNet device auth token.",
+                    "type": "string"
+                },
+                "device_id": {
+                    "type": "string",
+                    "description": "Mobile device ID."
+                },
+                "type": {
+                    "type": "string"
+                },
+                "weekday": {
+                    "$ref": "#/definitions/schedule_day"
+                },
+                "weekend": {
+                    "$ref": "#/definitions/schedule_day"
+                }
+            },
+            "type": "object"
+        },
+        "set_override": {
+            "required": [
+                "cmd",
+                "token",
+                "device_id"
+            ],
+            "properties": {
+                "cmd": {
+                    "type": "string",
+                    "description": "Command code.",
+                    "enum": [
+                        "set_override"
+                    ]
+                },
+                "account_token": {
+                    "description": "Account auth token.",
+                    "type": "string"
+                },
+                "token": {
+                    "description": "JuiceNet device auth token.",
+                    "type": "string"
+                },
+                "device_id": {
+                    "type": "string",
+                    "description": "Mobile device ID."
+                },
+                "energy_at_plugin": {
+                    "type": "number"
+                },
+                "override_time": {
+                    "type": "number"
+                },
+                "energy_to_add": {
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        },
+        "co2": {
+            "properties": {
+                "nonstop": {
+                    "type": "number"
+                },
+                "actual": {
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        },
+        "schedule_day": {
+            "properties": {
+                "start": {
+                    "type": "number"
+                },
+                "end": {
+                    "type": "number"
+                },
+                "car_ready_by": {
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        },
+        "add_account_unit": {
+            "required": [
+                "cmd",
+                "device_id",
+                "account_token",
+                "token"
+            ],
+            "properties": {
+                "cmd": {
+                    "type": "string",
+                    "description": "Command code.",
+                    "enum": [
+                        "add_account_unit"
+                    ]
+                },
+                "account_token": {
+                    "description": "Auth token.",
+                    "type": "string"
+                },
+                "device_id": {
+                    "type": "string",
+                    "description": "Mobile device ID."
+                },
+                "token": {
+                    "description": "Charger token.",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "get_share_pin": {
+            "required": [
+                "cmd",
+                "device_id",
+                "account_token",
+                "token"
+            ],
+            "properties": {
+                "cmd": {
+                    "type": "string",
+                    "description": "Command code.",
+                    "enum": [
+                        "get_share_pin"
+                    ]
+                },
+                "account_token": {
+                    "description": "Auth token.",
+                    "type": "string"
+                },
+                "device_id": {
+                    "type": "string",
+                    "description": "Mobile device ID."
+                },
+                "token": {
+                    "description": "Charger token.",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "get_share_pin_response": {
+            "properties": {
+                "success": {
+                    "type": "boolean"
+                },
+                "pin": {
+                    "description": "The pin, which can be used to add JBox to account.",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "add_car": {
+            "required": [
+                "cmd",
+                "token",
+                "device_id",
+                "info"
+            ],
+            "properties": {
+                "cmd": {
+                    "type": "string",
+                    "description": "Command code.",
+                    "enum": [
+                        "add_car"
+                    ]
+                },
+                "account_token": {
+                    "description": "Account auth token.",
+                    "type": "string"
+                },
+                "token": {
+                    "description": "JuiceNet device auth token.",
+                    "type": "string"
+                },
+                "device_id": {
+                    "type": "string",
+                    "description": "Mobile device ID."
+                },
+                "info": {
+                    "type": "object",
+                    "properties": {
+                        "battery_range_m": {
+                            "type": "number"
+                        },
+                        "battery_size_wh": {
+                            "type": "number"
+                        },
+                        "charging_rate_w": {
+                            "type": "number"
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "model_id": {
+                            "type": "number"
+                        }
+                    }
+                }
+            },
+            "type": "object"
+        },
+        "update_car": {
+            "required": [
+                "cmd",
+                "token",
+                "device_id",
+                "info"
+            ],
+            "properties": {
+                "cmd": {
+                    "type": "string",
+                    "description": "Command code.",
+                    "enum": [
+                        "update_car"
+                    ]
+                },
+                "account_token": {
+                    "description": "Account auth token.",
+                    "type": "string"
+                },
+                "token": {
+                    "description": "JuiceNet device auth token.",
+                    "type": "string"
+                },
+                "device_id": {
+                    "type": "string",
+                    "description": "Mobile device ID."
+                },
+                "info": {
+                    "properties": {
+                        "battery_range_m": {
+                            "type": "number"
+                        },
+                        "car_id": {
+                            "type": "number"
+                        },
+                        "battery_size_wh": {
+                            "type": "number"
+                        },
+                        "charging_rate_w": {
+                            "type": "number"
+                        },
+                        "description": {
+                            "type": "string"
+                        },
+                        "model_id": {
+                            "type": "number"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        },
+        "delete_car": {
+            "required": [
+                "cmd",
+                "token",
+                "device_id",
+                "info"
+            ],
+            "properties": {
+                "cmd": {
+                    "type": "string",
+                    "description": "Command code.",
+                    "enum": [
+                        "delete_car"
+                    ]
+                },
+                "account_token": {
+                    "description": "Account auth token.",
+                    "type": "string"
+                },
+                "token": {
+                    "description": "JuiceNet device auth token.",
+                    "type": "string"
+                },
+                "device_id": {
+                    "type": "string",
+                    "description": "Mobile device ID."
+                },
+                "info": {
+                    "type": "object",
+                    "properties": {
+                        "car_id": {
+                            "type": "number"
+                        }
+                    }
+                }
+            },
+            "type": "object"
+        },
+        "select_car": {
+            "required": [
+                "cmd",
+                "token",
+                "device_id",
+                "info"
+            ],
+            "properties": {
+                "cmd": {
+                    "type": "string",
+                    "description": "Command code.",
+                    "enum": [
+                        "select_car"
+                    ]
+                },
+                "account_token": {
+                    "description": "Account auth token.",
+                    "type": "string"
+                },
+                "token": {
+                    "description": "JuiceNet device auth token.",
+                    "type": "string"
+                },
+                "device_id": {
+                    "type": "string",
+                    "description": "Mobile device ID."
+                },
+                "info": {
+                    "type": "object",
+                    "properties": {
+                        "car_id": {
+                            "type": "number"
+                        }
+                    }
+                }
+            },
+            "type": "object"
+        },
+        "set_garage": {
+            "required": [
+                "cmd",
+                "token",
+                "device_id",
+                "garage_id"
+            ],
+            "properties": {
+                "cmd": {
+                    "type": "string",
+                    "description": "Command code.",
+                    "enum": [
+                        "set_garage"
+                    ]
+                },
+                "account_token": {
+                    "description": "Account auth token.",
+                    "type": "string"
+                },
+                "token": {
+                    "description": "JuiceNet device auth token.",
+                    "type": "string"
+                },
+                "device_id": {
+                    "type": "string",
+                    "description": "Mobile device ID."
+                },
+                "garage_id": {
+                    "type": "string",
+                    "description": "Garage ID."
+                }
+            },
+            "type": "object"
+        },
+        "get_history": {
+            "required": [
+                "cmd",
+                "token",
+                "device_id"
+            ],
+            "properties": {
+                "cmd": {
+                    "type": "string",
+                    "description": "Command code.",
+                    "enum": [
+                        "get_history"
+                    ]
+                },
+                "account_token": {
+                    "description": "Account auth token.",
+                    "type": "string"
+                },
+                "token": {
+                    "description": "JuiceNet device auth token.",
+                    "type": "string"
+                },
+                "device_id": {
+                    "type": "string",
+                    "description": "Mobile device ID."
+                },
+                "continuity_token": {
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        },
+        "get_history_response": {
+            "properties": {
+                "success": {
+                    "type": "boolean"
+                },
+                "continuity_token": {
+                    "type": "number"
+                },
+                "sessions": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/session"
+                    }
+                }
+            },
+            "type": "object"
+        },
+        "get_plot": {
+            "required": [
+                "cmd",
+                "token",
+                "device_id",
+                "attribute",
+                "session_id"
+            ],
+            "properties": {
+                "cmd": {
+                    "type": "string",
+                    "description": "Command code.",
+                    "enum": [
+                        "get_plot"
+                    ]
+                },
+                "account_token": {
+                    "description": "Account auth token.",
+                    "type": "string"
+                },
+                "token": {
+                    "description": "JuiceNet device auth token.",
+                    "type": "string"
+                },
+                "device_id": {
+                    "type": "string",
+                    "description": "Mobile device ID."
+                },
+                "attribute": {
+                    "type": "string",
+                    "description": "Charging attribute to get data for (i.e. 'power', etc)"
+                },
+                "session_id": {
+                    "type": "number",
+                    "description": "The charging session ID."
+                },
+                "intervals": {
+                    "type": "number",
+                    "description": "The number of points to return."
+                }
+            },
+            "type": "object"
+        },
+        "get_plot_response": {
+            "properties": {
+                "success": {
+                    "type": "boolean"
+                },
+                "points": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/plot_point"
+                    }
+                }
+            },
+            "type": "object"
+        },
+        "get_utilitybill_url": {
+            "required": [
+                "cmd",
+                "token",
+                "device_id",
+                "account_token"
+            ],
+            "properties": {
+                "cmd": {
+                    "type": "string",
+                    "description": "Command code.",
+                    "enum": [
+                        "get_program_signup_info"
+                    ]
+                },
+                "token": {
+                    "description": "JuiceNet device auth token.",
+                    "type": "string"
+                },
+                "device_id": {
+                    "type": "string",
+                    "description": "Mobile device ID."
+                },
+                "account_token": {
+                    "type": "string",
+                    "description": "Account auth token."
+                }
+            },
+            "type": "object"
+        },
+        "get_utilitybill_url_response": {
+            "properties": {
+                "success": {
+                    "type": "boolean"
+                },
+                "uploadTo": {
+                    "type": "string"
+                },
+                "downloadFrom": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "get_program_signup_info": {
+            "required": [
+                "cmd",
+                "token",
+                "device_id"
+            ],
+            "properties": {
+                "cmd": {
+                    "type": "string",
+                    "description": "Command code.",
+                    "enum": [
+                        "get_program_signup_info"
+                    ]
+                },
+                "token": {
+                    "description": "JuiceNet device auth token.",
+                    "type": "string"
+                },
+                "device_id": {
+                    "type": "string",
+                    "description": "Mobile device ID."
+                }
+            },
+            "type": "object"
+        },
+        "get_program_signup_info_response": {
+            "properties": {
+                "success": {
+                    "type": "boolean"
+                },
+                "step1": {
+                    "properties": {
+                        "first_name": {
+                            "type": "string"
+                        },
+                        "last_name": {
+                            "type": "string"
+                        },
+                        "name_is_different_in_bill": {
+                            "type": "boolean"
+                        },
+                        "bill_first_name": {
+                            "type": "string"
+                        },
+                        "bill_last_name": {
+                            "type": "string"
+                        },
+                        "email": {
+                            "type": "string"
+                        },
+                        "phone_number": {
+                            "type": "string"
+                        },
+                        "address": {
+                            "type": "string"
+                        },
+                        "city": {
+                            "type": "string"
+                        },
+                        "service_address": {
+                            "type": "string"
+                        },
+                        "service_city": {
+                            "type": "string"
+                        },
+                        "state": {
+                            "type": "string"
+                        },
+                        "post_code": {
+                            "type": "string"
+                        }
+                    },
+                    "type": "object"
+                },
+                "step2": {
+                    "items": {
+                        "$ref": "#/definitions/reward_info_form_field"
+                    },
+                    "type": "array"
+                }
+            },
+            "type": "object"
+        },
+        "reward_info_form_field": {
+            "required": [
+                "field_id",
+                "title",
+                "placeholder",
+                "helpUrl"
+            ],
+            "properties": {
+                "field_id": {
+                    "type": "string"
+                },
+                "title": {
+                    "type": "string"
+                },
+                "placeholder": {
+                    "type": "string"
+                },
+                "helpUrl": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "set_program_signup_info": {
+            "required": [
+                "cmd",
+                "token",
+                "device_id",
+                "userinfo"
+            ],
+            "properties": {
+                "cmd": {
+                    "type": "string",
+                    "description": "Command code.",
+                    "enum": [
+                        "set_program_signup_info"
+                    ]
+                },
+                "token": {
+                    "description": "JuiceNet device auth token.",
+                    "type": "string"
+                },
+                "device_id": {
+                    "type": "string",
+                    "description": "Mobile device ID."
+                },
+                "userinfo": {
+                    "properties": {
+                        "first_name": {
+                            "type": "string"
+                        },
+                        "last_name": {
+                            "type": "string"
+                        },
+                        "name_is_different_in_bill": {
+                            "type": "string"
+                        },
+                        "bill_first_name": {
+                            "type": "string"
+                        },
+                        "bill_last_name": {
+                            "type": "string"
+                        },
+                        "email": {
+                            "type": "string"
+                        },
+                        "phone_number": {
+                            "type": "string"
+                        },
+                        "address": {
+                            "type": "string"
+                        },
+                        "city": {
+                            "type": "string"
+                        },
+                        "service_address": {
+                            "type": "string"
+                        },
+                        "service_city": {
+                            "type": "string"
+                        },
+                        "state": {
+                            "type": "string"
+                        },
+                        "post_code": {
+                            "type": "string"
+                        },
+                        "images": {
+                            "items": {
+                                "type": "string"
+                            },
+                            "type": "array"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        },
+        "delete_account_unit": {
+            "required": [
+                "cmd",
+                "token",
+                "account_token",
+                "device_id"
+            ],
+            "properties": {
+                "cmd": {
+                    "type": "string",
+                    "description": "Command code.",
+                    "enum": [
+                        "delete_account_unit"
+                    ]
+                },
+                "account_token": {
+                    "description": "Auth token.",
+                    "type": "string"
+                },
+                "device_id": {
+                    "type": "string",
+                    "description": "Mobile device ID."
+                },
+                "token": {
+                    "description": "Charger token.",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "get_server_info": {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "type": "string",
+                    "description": "Command code.",
+                    "enum": [
+                        "get_server_info"
+                    ]
+                }
+            },
+            "type": "object"
+        },
+        "get_servrer_info_response": {
+            "properties": {
+                "success": {
+                    "type": "boolean"
+                },
+                "caller_ip": {
+                    "type": "string",
+                    "description": "The caller IP address."
+                },
+                "version_api": {
+                    "properties": {
+                        "_Major": {
+                            "type": "number"
+                        },
+                        "_Minor": {
+                            "type": "number"
+                        },
+                        "_Build": {
+                            "type": "number"
+                        },
+                        "_Revision": {
+                            "type": "number"
+                        }
+                    },
+                    "type": "object"
+                },
+                "version_car_model_db": {
+                    "type": "string"
+                },
+                "default_car_model": {
+                    "$ref": "#/definitions/car_model"
+                }
+            },
+            "type": "object"
+        },
+        "get_timezones": {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "type": "string",
+                    "description": "Command code.",
+                    "enum": [
+                        "get_timezones"
+                    ]
+                }
+            },
+            "type": "object"
+        },
+        "get_timezones_response": {
+            "properties": {
+                "success": {
+                    "type": "boolean"
+                },
+                "timezones": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/timezone"
+                    }
+                }
+            },
+            "type": "object"
+        },
+        "get_car_models": {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "type": "string",
+                    "description": "Command code.",
+                    "enum": [
+                        "get_car_models"
+                    ]
+                }
+            },
+            "type": "object"
+        },
+        "get_car_models_response": {
+            "properties": {
+                "success": {
+                    "type": "boolean"
+                },
+                "version": {
+                    "type": "string"
+                },
+                "models": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/car_model"
+                    }
+                }
+            },
+            "type": "object"
+        },
+        "logout": {
+            "required": [
+                "cmd",
+                "account_token"
+            ],
+            "properties": {
+                "cmd": {
+                    "type": "string",
+                    "description": "Command code.",
+                    "enum": [
+                        "logout"
+                    ]
+                },
+                "device_id": {
+                    "type": "string",
+                    "description": "Mobile device ID."
+                },
+                "account_token": {
+                    "description": "Auth token.",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "check_device": {
+            "required": [
+                "cmd"
+            ],
+            "properties": {
+                "cmd": {
+                    "type": "string",
+                    "description": "Command code.",
+                    "enum": [
+                        "check_device"
+                    ]
+                },
+                "ID": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "check_device_response": {
+            "properties": {
+                "success": {
+                    "type": "boolean"
+                },
+                "ID": {
+                    "type": "string"
+                },
+                "secured": {
+                    "type": "boolean"
+                },
+                "time_last_ping": {
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        },
+        "pair_device": {
+            "required": [
+                "cmd",
+                "device_id",
+                "ID",
+                "pin"
+            ],
+            "properties": {
+                "cmd": {
+                    "type": "string",
+                    "description": "Command code.",
+                    "enum": [
+                        "pair_device"
+                    ]
+                },
+                "device_id": {
+                    "type": "string",
+                    "description": "Mobile device ID to pair with."
+                },
+                "ID": {
+                    "type": "string",
+                    "description": "JuiceNet device ID to pair with."
+                },
+                "pin": {
+                    "type": "string",
+                    "description": "The password to access JuiceNet device."
+                }
+            },
+            "type": "object"
+        },
+        "pair_device_response": {
+            "properties": {
+                "success": {
+                    "type": "boolean"
+                },
+                "ID": {
+                    "type": "string"
+                },
+                "secured": {
+                    "type": "boolean"
+                },
+                "time_last_ping": {
+                    "type": "number"
+                }
+            },
+            "type": "object"
+        },
+        "register_pushes": {
+            "required": [
+                "cmd",
+                "device_id",
+                "account_token",
+                "push_token"
+            ],
+            "properties": {
+                "cmd": {
+                    "type": "string",
+                    "description": "Command code.",
+                    "enum": [
+                        "register_pushes"
+                    ]
+                },
+                "device_id": {
+                    "type": "string",
+                    "description": "Mobile device ID to pair with."
+                },
+                "account_token": {
+                    "description": "Auth token.",
+                    "type": "string"
+                },
+                "push_token": {
+                    "description": "Firebase push token.",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "reset_pin": {
+            "required": [
+                "cmd",
+                "ID",
+                "device_id",
+                "pin",
+                "step"
+            ],
+            "properties": {
+                "cmd": {
+                    "type": "string",
+                    "description": "Command code.",
+                    "enum": [
+                        "reset_pin"
+                    ]
+                },
+                "ID": {
+                    "type": "string",
+                    "description": "JuiceNet device ID."
+                },
+                "device_id": {
+                    "type": "string",
+                    "description": "Mobile device ID to pair with."
+                },
+                "pin": {
+                    "type": "string",
+                    "description": "The new password."
+                },
+                "step": {
+                    "type": "number",
+                    "description": "The resetting step number. The user will be asked to plug/unplug the charger several times - it's a different steps."
+                },
+                "session": {
+                    "type": "string",
+                    "description": "The password resetting session ID. Will be returned from the server after step #1."
+                }
+            },
+            "type": "object"
+        },
+        "reset_pin_response": {
+            "properties": {
+                "success": {
+                    "type": "boolean"
+                },
+                "ID": {
+                    "type": "string",
+                    "description": "JuiceNet device ID."
+                },
+                "device_id": {
+                    "type": "string",
+                    "description": "Mobile device ID to pair with."
+                },
+                "user_message": {
+                    "type": "string",
+                    "description": "The message to show the user."
+                },
+                "session": {
+                    "type": "string",
+                    "description": "The password resetting session ID."
+                },
+                "next_step": {
+                    "type": "number",
+                    "description": "The next step number."
+                }
+            },
+            "type": "object"
+        },
+        "add_unit": {
+            "required": [
+                "cmd",
+                "device_id",
+                "account_token",
+                "ID"
+            ],
+            "properties": {
+                "cmd": {
+                    "type": "string",
+                    "description": "Command code.",
+                    "enum": [
+                        "add_unit"
+                    ]
+                },
+                "device_id": {
+                    "type": "string",
+                    "description": "Mobile device ID."
+                },
+                "account_token": {
+                    "description": "Auth token.",
+                    "type": "string"
+                },
+                "ID": {
+                    "description": "JuiceNet device ID.",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "add_unit_response": {
+            "properties": {
+                "success": {
+                    "type": "boolean"
+                },
+                "unit_id": {
+                    "description": "JuiceNet device ID.",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "Charger name.",
+                    "type": "string"
+                },
+                "token": {
+                    "description": "Charger token.",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "share_device": {
+            "required": [
+                "cmd",
+                "device_id",
+                "account_token",
+                "ID",
+                "pin"
+            ],
+            "properties": {
+                "cmd": {
+                    "type": "string",
+                    "description": "Command code.",
+                    "enum": [
+                        "share_device"
+                    ]
+                },
+                "device_id": {
+                    "type": "string",
+                    "description": "Mobile device ID."
+                },
+                "account_token": {
+                    "description": "Auth token.",
+                    "type": "string"
+                },
+                "ID": {
+                    "description": "JuiceNet device ID.",
+                    "type": "string"
+                },
+                "pin": {
+                    "description": "Pin code to add JuiceNet device to the account.",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "share_device_response": {
+            "properties": {
+                "success": {
+                    "type": "boolean"
+                },
+                "unit_id": {
+                    "description": "JuiceNet device ID.",
+                    "type": "string"
+                },
+                "name": {
+                    "description": "Charger name.",
+                    "type": "string"
+                },
+                "token": {
+                    "description": "Charger token.",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "reset_ownership": {
+            "required": [
+                "cmd",
+                "ID",
+                "device_id",
+                "step",
+                "account_token"
+            ],
+            "properties": {
+                "cmd": {
+                    "type": "string",
+                    "description": "Command code.",
+                    "enum": [
+                        "reset_ownership"
+                    ]
+                },
+                "account_token": {
+                    "description": "Auth token.",
+                    "type": "string"
+                },
+                "ID": {
+                    "type": "string",
+                    "description": "JuiceNet device ID."
+                },
+                "device_id": {
+                    "type": "string",
+                    "description": "Mobile device ID to pair with."
+                },
+                "step": {
+                    "type": "number",
+                    "description": "The resetting step number. The user will be asked to plug/unplug the charger several times - it's a different steps."
+                },
+                "session": {
+                    "type": "string",
+                    "description": "The password resetting session ID. Will be returned from the server after step #1."
+                }
+            },
+            "type": "object"
+        },
+        "reset_ownership_response": {
+            "properties": {
+                "success": {
+                    "type": "boolean"
+                },
+                "ID": {
+                    "type": "string",
+                    "description": "JuiceNet device ID."
+                },
+                "device_id": {
+                    "type": "string",
+                    "description": "Mobile device ID to pair with."
+                },
+                "user_message": {
+                    "type": "string",
+                    "description": "The message to show the user."
+                },
+                "session": {
+                    "type": "string",
+                    "description": "The password resetting session ID."
+                },
+                "next_step": {
+                    "type": "number",
+                    "description": "The next step number."
+                }
+            },
+            "type": "object"
+        },
+        "get_account_units": {
+            "required": [
+                "cmd",
+                "device_id",
+                "account_token"
+            ],
+            "properties": {
+                "cmd": {
+                    "type": "string",
+                    "description": "Command code.",
+                    "enum": [
+                        "get_account_units"
+                    ]
+                },
+                "device_id": {
+                    "type": "string",
+                    "description": "Mobile device ID."
+                },
+                "account_token": {
+                    "description": "Auth token.",
+                    "type": "string"
+                }
+            },
+            "x-examples": {
+                "application/json": {
+                    "cmd": "get_account_units",
+                    "device_id": "B4302ACA-153B-44A4-8204-5921197E8D19",
+                    "account_token": "c31a1e03-1017-4048-b0bd-423da512f4c2"
+                }
+            },
+            "type": "object"
+        },
+        "get_account_units_response": {
+            "properties": {
+                "success": {
+                    "type": "boolean"
+                },
+                "units": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/device"
+                    }
+                }
+            },
+            "type": "object"
+        },
+        "notification_settings": {
+            "properties": {
+                "charging_delayed_due_to_ToU": {
+                    "properties": {
+                        "email": {
+                            "type": "boolean"
+                        },
+                        "push": {
+                            "type": "boolean"
+                        }
+                    },
+                    "type": "object"
+                },
+                "start_charging": {
+                    "properties": {
+                        "email": {
+                            "type": "boolean"
+                        },
+                        "push": {
+                            "type": "boolean"
+                        }
+                    },
+                    "type": "object"
+                },
+                "stop_charging": {
+                    "properties": {
+                        "email": {
+                            "type": "boolean"
+                        },
+                        "push": {
+                            "type": "boolean"
+                        }
+                    },
+                    "type": "object"
+                },
+                "is_offline": {
+                    "properties": {
+                        "email": {
+                            "type": "boolean"
+                        },
+                        "push": {
+                            "type": "boolean"
+                        }
+                    },
+                    "type": "object"
+                },
+                "is_back_online": {
+                    "properties": {
+                        "email": {
+                            "type": "boolean"
+                        },
+                        "push": {
+                            "type": "boolean"
+                        }
+                    },
+                    "type": "object"
+                },
+                "is_not_plugged_in_by": {
+                    "properties": {
+                        "email": {
+                            "type": "boolean"
+                        },
+                        "push": {
+                            "type": "boolean"
+                        },
+                        "time": {
+                            "type": "number"
+                        }
+                    },
+                    "type": "object"
+                }
+            },
+            "type": "object"
+        },
+        "get_notifications": {
+            "required": [
+                "cmd",
+                "token",
+                "account_token",
+                "device_id"
+            ],
+            "properties": {
+                "cmd": {
+                    "type": "string",
+                    "description": "Command code.",
+                    "enum": [
+                        "get_notifications"
+                    ]
+                },
+                "account_token": {
+                    "description": "Auth token.",
+                    "type": "string"
+                },
+                "device_id": {
+                    "type": "string",
+                    "description": "Mobile device ID."
+                },
+                "token": {
+                    "description": "Charger token.",
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        },
+        "get_notifications_response": {
+            "properties": {
+                "success": {
+                    "type": "boolean"
+                },
+                "notifications": {
+                    "$ref": "#/definitions/notification_settings"
+                }
+            },
+            "type": "object"
+        },
+        "set_notifications": {
+            "properties": {
+                "cmd": {
+                    "type": "string",
+                    "description": "Command code.",
+                    "enum": [
+                        "set_notifications"
+                    ]
+                },
+                "account_token": {
+                    "description": "Account auth token.",
+                    "type": "string"
+                },
+                "token": {
+                    "description": "JuiceNet device auth token.",
+                    "type": "string"
+                },
+                "device_id": {
+                    "type": "string",
+                    "description": "Mobile device ID."
+                },
+                "notifications": {
+                    "$ref": "#/definitions/notification_settings"
+                }
+            },
+            "type": "object"
+        },
+        "success_response": {
+            "properties": {
+                "success": {
+                    "type": "boolean"
+                }
+            },
+            "type": "object"
+        }
+    }
+}

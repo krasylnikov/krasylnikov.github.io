@@ -1,0 +1,13 @@
+properties:
+  id: 
+    type: number
+    description: "The charging session ID."
+  time_start:
+    type: number
+  time_end:
+    type: number
+  duration:
+    type: number
+  wh_energy:
+    type: number
+type: object

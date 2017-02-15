@@ -1,0 +1,24 @@
+properties:
+  model_id:
+    type: string
+  description:
+    type: string
+  make:
+    type: string
+  model:
+    type: string
+  year:
+    type: number
+  range_m:
+    type: number
+  range_city_m:
+    type: number
+  range_highway_m:
+    type: number
+  battery_size_wh:
+    type: number
+  charging_rate_w:
+    type: number
+  images:
+    $ref: "#/definitions/car_images"
+type: object

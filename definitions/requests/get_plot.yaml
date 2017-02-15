@@ -1,0 +1,31 @@
+    required:
+      - cmd
+      - token
+      - device_id
+      - attribute
+      - session_id
+    properties:
+      cmd:
+        type: string
+        description: "Command code."
+        enum:
+          - get_plot
+      account_token: 
+        description: "Account auth token."
+        type: string
+      token:
+        description: "JuiceNet device auth token."
+        type: string
+      device_id: 
+        type: string
+        description: "Mobile device ID."
+      attribute:
+        type: string
+        description: "Charging attribute to get data for (i.e. 'power', etc)"
+      session_id:
+        type: number
+        description: "The charging session ID."
+      intervals:
+        type: number
+        description: "The number of points to return."
+    type: object

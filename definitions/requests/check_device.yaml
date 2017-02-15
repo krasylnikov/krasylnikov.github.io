@@ -1,0 +1,9 @@
+required:
+    - cmd
+properties:
+    cmd:
+        type: string
+        description: "Command code."
+    enum:
+        - check_device
+type: object

@@ -1,0 +1,10 @@
+properties:
+    success:
+        type: boolean
+    ID:
+        type: string
+    secured:
+        type: boolean
+    time_last_ping:
+        type: number
+type: object

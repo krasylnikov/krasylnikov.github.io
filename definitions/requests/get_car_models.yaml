@@ -1,0 +1,10 @@
+  get_car_models:
+    required:
+      - cmd
+    properties:
+      cmd:
+          type: string
+          description: "Command code."
+          enum:
+            - get_car_models
+    type: object

@@ -1,0 +1,22 @@
+required:
+  - cmd
+  - device_id
+  - account_token
+properties: 
+  cmd: 
+    type: string
+    description: "Command code."
+    enum: 
+      - get_account_units
+  device_id: 
+    type: string
+    description: "Mobile device ID."
+  account_token: 
+    description: "Auth token."
+    type: string
+x-examples:
+  application/json: 
+    cmd: get_account_units
+    device_id: B4302ACA-153B-44A4-8204-5921197E8D19
+    account_token: c31a1e03-1017-4048-b0bd-423da512f4c2
+type: object

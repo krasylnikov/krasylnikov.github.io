@@ -1,0 +1,43 @@
+    required:
+      - cmd
+      - token
+      - device_id
+      - userinfo
+    properties:
+      cmd:
+        type: string
+        description: Command code.
+        enum:
+          - set_program_signup_info
+      token:
+        description: JuiceNet device auth token.
+        type: string
+      device_id:
+        type: string
+        description: Mobile device ID.
+      userinfo:
+        properties:
+          first_name:
+            type: string
+          last_name:
+            type: string
+          name_is_different_in_bill:
+            type: string
+          email:
+            type: string
+          phone_number:
+            type: string
+          address:
+            type: string
+          city:
+            type: string
+          service_address:
+            type: string
+          service_city:
+            type: string
+          state:
+            type: string
+          post_code:
+            type: string
+        type: object
+    type: object

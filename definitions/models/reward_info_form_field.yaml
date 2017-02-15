@@ -1,0 +1,15 @@
+    required:
+      - field_id
+      - title
+      - placeholder
+      - helpUrl
+    properties:
+      field_id:
+        type: string
+      title:
+        type: string
+      placeholder:
+        type: string
+      helpUrl:
+        type: string
+    type: object

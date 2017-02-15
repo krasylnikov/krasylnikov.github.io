@@ -1,0 +1,8 @@
+properties:
+  charging:
+    type: string
+  default:
+    type: string
+  plugged:
+    type: string
+type: object
