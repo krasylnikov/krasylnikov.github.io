@@ -1929,7 +1929,7 @@
                     "type": "string",
                     "description": "Command code.",
                     "enum": [
-                        "get_program_signup_info"
+                        "get_utilitybill_url"
                     ]
                 },
                 "token": {
