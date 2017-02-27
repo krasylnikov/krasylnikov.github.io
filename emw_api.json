@@ -1,7 +1,7 @@
 {
     "swagger": "2.0",
     "info": {
-        "version": "1.0.1",
+        "version": "1.0.2",
         "title": "Mobile app to web dashboard connection API"
     },
     "basePath": "/box_api_secure",
@@ -2541,6 +2541,7 @@
             "required": [
                 "cmd",
                 "device_id",
+                "device_name",
                 "account_token",
                 "ID",
                 "pin"
@@ -2556,6 +2557,10 @@
                 "device_id": {
                     "type": "string",
                     "description": "Mobile device ID."
+                },
+                "device_name": {
+                    "type": "string",
+                    "description": "Mobile device name (e.g. \"My iPhone\")"
                 },
                 "account_token": {
                     "description": "Auth token.",
