@@ -943,6 +943,9 @@
                 },
                 "wh_energy": {
                     "type": "number"
+                },
+                "points": {
+                    "type": "number"
                 }
             },
             "type": "object"
