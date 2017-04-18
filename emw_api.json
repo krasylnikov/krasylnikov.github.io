@@ -1,7 +1,7 @@
 {
     "swagger": "2.0",
     "info": {
-        "version": "1.0.3",
+        "version": "1.0.4",
         "title": "Mobile app to web dashboard connection API"
     },
     "basePath": "/box_api_secure",
@@ -789,11 +789,37 @@
                 "description": "Set rewards program signup info.",
                 "parameters": [
                     {
-                        "description": "Add JuiceNet device to dashboard command object.",
+                        "description": "Add JuiceNet device to Rewards program command object.",
                         "in": "body",
                         "name": "cmd",
                         "schema": {
                             "$ref": "#/definitions/set_program_signup_info"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success flag.",
+                        "schema": {
+                            "$ref": "#/definitions/success_response"
+                        }
+                    }
+                }
+            }
+        },
+        "/delete_program_signup_info": {
+            "post": {
+                "tags": [
+                    "box_api_secure"
+                ],
+                "description": "Delete rewards program signup info.",
+                "parameters": [
+                    {
+                        "description": "Delete JuiceNet device from Rewards program command object.",
+                        "in": "body",
+                        "name": "cmd",
+                        "schema": {
+                            "$ref": "#/definitions/delete_program_signup_info"
                         }
                     }
                 ],
@@ -2142,6 +2168,41 @@
                         }
                     },
                     "type": "object"
+                }
+            },
+            "type": "object"
+        },
+        "delete_program_signup_info": {
+            "required": [
+                "cmd",
+                "token",
+                "account_token",
+                "device_id",
+                "ID"
+            ],
+            "properties": {
+                "cmd": {
+                    "type": "string",
+                    "description": "Command code.",
+                    "enum": [
+                        "delete_program_signup_info"
+                    ]
+                },
+                "account_token": {
+                    "description": "Auth token.",
+                    "type": "string"
+                },
+                "device_id": {
+                    "type": "string",
+                    "description": "Mobile device ID."
+                },
+                "token": {
+                    "description": "Charger token.",
+                    "type": "string"
+                },
+                "ID": {
+                    "description": "Charger ID.",
+                    "type": "string"
                 }
             },
             "type": "object"
