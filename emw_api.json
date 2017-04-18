@@ -1,7 +1,7 @@
 {
     "swagger": "2.0",
     "info": {
-        "version": "1.0.4",
+        "version": "1.0.3",
         "title": "Mobile app to web dashboard connection API"
     },
     "basePath": "/box_api_secure",
@@ -1890,12 +1890,12 @@
             "type": "object"
         },
         "get_plot": {
+            "description": "Return plot data for session (by its id) or for period (time_start time_end)",
             "required": [
                 "cmd",
                 "token",
                 "device_id",
-                "attribute",
-                "session_id"
+                "attribute"
             ],
             "properties": {
                 "cmd": {
@@ -1919,7 +1919,11 @@
                 },
                 "attribute": {
                     "type": "string",
-                    "description": "Charging attribute to get data for (i.e. 'power', etc)"
+                    "description": "Charging attribute to get data for (i.e. 'power', etc)",
+                    "enum": [
+                        "power",
+                        "co2"
+                    ]
                 },
                 "session_id": {
                     "type": "number",
@@ -1928,6 +1932,14 @@
                 "intervals": {
                     "type": "number",
                     "description": "The number of points to return."
+                },
+                "time_start": {
+                    "type": "number",
+                    "description": "Period start."
+                },
+                "time_end": {
+                    "type": "number",
+                    "description": "Period end."
                 }
             },
             "type": "object"
