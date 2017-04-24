@@ -1,7 +1,7 @@
 {
     "swagger": "2.0",
     "info": {
-        "version": "1.0.3",
+        "version": "1.0.4",
         "title": "Mobile app to web dashboard connection API"
     },
     "basePath": "/box_api_secure",
@@ -1206,6 +1206,10 @@
                 },
                 "country_code": {
                     "type": "string"
+                },
+                "load_group_id": {
+                    "type": "string",
+                    "description": "The load group ID. Optional."
                 },
                 "IP": {
                     "type": "string",
