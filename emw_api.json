@@ -970,7 +970,7 @@
         "wh_energy": {
           "type": "number"
         },
-        "points": {
+        "juice_points": {
           "type": "number"
         }
       },
@@ -1363,6 +1363,9 @@
               "type": "number"
             },
             "wh_energy_to_add": {
+              "type": "number"
+            },
+            "juice_points": {
               "type": "number"
             },
             "flags": {
