@@ -1277,6 +1277,10 @@
             "set_override": {
               "$ref": "#/definitions/restriction"
             }
+            ,
+            "pro_functions": {
+              "$ref": "#/definitions/restriction"
+            }
           },
           "type": "object"
         }
