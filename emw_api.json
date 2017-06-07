@@ -1090,8 +1090,7 @@
                     "type": "string"
                 },
                 "token": {
-                    "description": "Charger token.",
-                    "type": "string"
+                    "$ref": "#/definitions/token"
                 }
             },
             "type": "object"
@@ -1111,16 +1110,13 @@
                     ]
                 },
                 "account_token": {
-                    "description": "Account auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/account_token"
                 },
                 "token": {
-                    "description": "JuiceNet device auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/token"
                 },
                 "device_id": {
-                    "type": "string",
-                    "description": "Mobile device ID."
+                    "$ref": "#/definitions/device_id"
                 },
                 "name": {
                     "type": "string",
@@ -1191,12 +1187,10 @@
                     ]
                 },
                 "account_token": {
-                    "description": "Account auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/account_token"
                 },
                 "token": {
-                    "description": "JuiceNet device auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/token"
                 },
                 "device_id": {
                     "type": "string",
@@ -1302,12 +1296,10 @@
                     ]
                 },
                 "account_token": {
-                    "description": "Account auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/account_token"
                 },
                 "token": {
-                    "description": "JuiceNet device auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/token"
                 },
                 "device_id": {
                     "type": "string",
@@ -1461,12 +1453,10 @@
                     ]
                 },
                 "account_token": {
-                    "description": "Account auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/account_token"
                 },
                 "token": {
-                    "description": "JuiceNet device auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/token"
                 },
                 "device_id": {
                     "type": "string",
@@ -1509,16 +1499,13 @@
                     ]
                 },
                 "account_token": {
-                    "description": "Account auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/account_token"
                 },
                 "token": {
-                    "description": "JuiceNet device auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/token"
                 },
                 "device_id": {
-                    "type": "string",
-                    "description": "Mobile device ID."
+                    "$ref": "#/definitions/device_id"
                 },
                 "type": {
                     "type": "string"
@@ -1547,16 +1534,13 @@
                     ]
                 },
                 "account_token": {
-                    "description": "Account auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/account_token"
                 },
                 "token": {
-                    "description": "JuiceNet device auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/token"
                 },
                 "device_id": {
-                    "type": "string",
-                    "description": "Mobile device ID."
+                    "$ref": "#/definitions/device_id"
                 },
                 "energy_at_plugin": {
                     "type": "number"
@@ -1611,16 +1595,13 @@
                     ]
                 },
                 "account_token": {
-                    "description": "Auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/account_token"
                 },
                 "device_id": {
-                    "type": "string",
-                    "description": "Mobile device ID."
+                    "$ref": "#/definitions/device_id"
                 },
                 "token": {
-                    "description": "Charger token.",
-                    "type": "string"
+                    "$ref": "#/definitions/token"
                 }
             },
             "type": "object"
@@ -1641,16 +1622,13 @@
                     ]
                 },
                 "account_token": {
-                    "description": "Auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/account_token"
                 },
                 "device_id": {
-                    "type": "string",
-                    "description": "Mobile device ID."
+                    "$ref": "#/definitions/device_id"
                 },
                 "token": {
-                    "description": "Charger token.",
-                    "type": "string"
+                    "$ref": "#/definitions/token"
                 }
             },
             "type": "object"
@@ -1683,16 +1661,13 @@
                     ]
                 },
                 "account_token": {
-                    "description": "Account auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/account_token"
                 },
                 "token": {
-                    "description": "JuiceNet device auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/token"
                 },
                 "device_id": {
-                    "type": "string",
-                    "description": "Mobile device ID."
+                    "$ref": "#/definitions/device_id"
                 },
                 "info": {
                     "type": "object",
@@ -1733,16 +1708,13 @@
                     ]
                 },
                 "account_token": {
-                    "description": "Account auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/account_token"
                 },
                 "token": {
-                    "description": "JuiceNet device auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/token"
                 },
                 "device_id": {
-                    "type": "string",
-                    "description": "Mobile device ID."
+                    "$ref": "#/definitions/device_id"
                 },
                 "info": {
                     "properties": {
@@ -1786,16 +1758,13 @@
                     ]
                 },
                 "account_token": {
-                    "description": "Account auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/account_token"
                 },
                 "token": {
-                    "description": "JuiceNet device auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/token"
                 },
                 "device_id": {
-                    "type": "string",
-                    "description": "Mobile device ID."
+                    "$ref": "#/definitions/device_id"
                 },
                 "info": {
                     "type": "object",
@@ -1824,16 +1793,13 @@
                     ]
                 },
                 "account_token": {
-                    "description": "Account auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/account_token"
                 },
                 "token": {
-                    "description": "JuiceNet device auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/token"
                 },
                 "device_id": {
-                    "type": "string",
-                    "description": "Mobile device ID."
+                    "$ref": "#/definitions/device_id"
                 },
                 "info": {
                     "type": "object",
@@ -1862,16 +1828,13 @@
                     ]
                 },
                 "account_token": {
-                    "description": "Account auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/account_token"
                 },
                 "token": {
-                    "description": "JuiceNet device auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/token"
                 },
                 "device_id": {
-                    "type": "string",
-                    "description": "Mobile device ID."
+                    "$ref": "#/definitions/device_id"
                 },
                 "garage_id": {
                     "type": "string",
@@ -1895,16 +1858,13 @@
                     ]
                 },
                 "account_token": {
-                    "description": "Account auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/account_token"
                 },
                 "token": {
-                    "description": "JuiceNet device auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/token"
                 },
                 "device_id": {
-                    "type": "string",
-                    "description": "Mobile device ID."
+                    "$ref": "#/definitions/device_id"
                 },
                 "continuity_token": {
                     "type": "number"
@@ -1946,16 +1906,13 @@
                     ]
                 },
                 "account_token": {
-                    "description": "Account auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/account_token"
                 },
                 "token": {
-                    "description": "JuiceNet device auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/token"
                 },
                 "device_id": {
-                    "type": "string",
-                    "description": "Mobile device ID."
+                    "$ref": "#/definitions/device_id"
                 },
                 "attribute": {
                     "type": "string",
@@ -2014,16 +1971,13 @@
                     ]
                 },
                 "token": {
-                    "description": "JuiceNet device auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/token"
                 },
                 "device_id": {
-                    "type": "string",
-                    "description": "Mobile device ID."
+                    "$ref": "#/definitions/device_id"
                 },
                 "account_token": {
-                    "type": "string",
-                    "description": "Account auth token."
+                    "$ref": "#/definitions/account_token"
                 }
             },
             "type": "object"
@@ -2057,8 +2011,7 @@
                     ]
                 },
                 "token": {
-                    "description": "JuiceNet device auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/token"
                 },
                 "device_id": {
                     "type": "string",
@@ -2164,12 +2117,10 @@
                     ]
                 },
                 "token": {
-                    "description": "JuiceNet device auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/token"
                 },
                 "device_id": {
-                    "type": "string",
-                    "description": "Mobile device ID."
+                    "$ref": "#/definitions/device_id"
                 },
                 "userinfo": {
                     "properties": {
@@ -2241,16 +2192,13 @@
                     ]
                 },
                 "account_token": {
-                    "description": "Auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/account_token"
                 },
                 "device_id": {
-                    "type": "string",
-                    "description": "Mobile device ID."
+                    "$ref": "#/definitions/device_id"
                 },
                 "token": {
-                    "description": "Charger token.",
-                    "type": "string"
+                    "$ref": "#/definitions/token"
                 },
                 "ID": {
                     "description": "Charger ID.",
@@ -2275,16 +2223,13 @@
                     ]
                 },
                 "account_token": {
-                    "description": "Auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/account_token"
                 },
                 "device_id": {
-                    "type": "string",
-                    "description": "Mobile device ID."
+                    "$ref": "#/definitions/device_id"
                 },
                 "token": {
-                    "description": "Charger token.",
-                    "type": "string"
+                    "$ref": "#/definitions/token"
                 }
             },
             "type": "object"
@@ -2414,12 +2359,10 @@
                     ]
                 },
                 "device_id": {
-                    "type": "string",
-                    "description": "Mobile device ID."
+                    "$ref": "#/definitions/device_id"
                 },
                 "account_token": {
-                    "description": "Auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/account_token"
                 }
             },
             "type": "object"
@@ -2526,8 +2469,7 @@
                     "description": "Mobile device ID to pair with."
                 },
                 "account_token": {
-                    "description": "Auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/account_token"
                 },
                 "push_token": {
                     "description": "Firebase push token.",
@@ -2620,16 +2562,14 @@
                     ]
                 },
                 "device_id": {
-                    "type": "string",
-                    "description": "Mobile device ID."
+                    "$ref": "#/definitions/device_id"
                 },
                 "device_name": {
                     "type": "string",
                     "description": "Mobile device name (e.g. \"My iPhone\")"
                 },
                 "account_token": {
-                    "description": "Auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/account_token"
                 },
                 "ID": {
                     "description": "JuiceNet device ID.",
@@ -2652,8 +2592,7 @@
                     "type": "string"
                 },
                 "token": {
-                    "description": "Charger token.",
-                    "type": "string"
+                    "$ref": "#/definitions/token"
                 }
             },
             "type": "object"
@@ -2676,16 +2615,14 @@
                     ]
                 },
                 "device_id": {
-                    "type": "string",
-                    "description": "Mobile device ID."
+                    "$ref": "#/definitions/device_id"
                 },
                 "device_name": {
                     "type": "string",
                     "description": "Mobile device name (e.g. \"My iPhone\")"
                 },
                 "account_token": {
-                    "description": "Auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/account_token"
                 },
                 "ID": {
                     "description": "JuiceNet device ID.",
@@ -2712,8 +2649,7 @@
                     "type": "string"
                 },
                 "token": {
-                    "description": "Charger token.",
-                    "type": "string"
+                    "$ref": "#/definitions/token"
                 }
             },
             "type": "object"
@@ -2735,8 +2671,7 @@
                     ]
                 },
                 "account_token": {
-                    "description": "Auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/account_token"
                 },
                 "ID": {
                     "type": "string",
@@ -2800,19 +2735,10 @@
                     ]
                 },
                 "device_id": {
-                    "type": "string",
-                    "description": "Mobile device ID."
+                    "$ref": "#/definitions/device_id"
                 },
                 "account_token": {
-                    "description": "Auth token.",
-                    "type": "string"
-                }
-            },
-            "x-examples": {
-                "application/json": {
-                    "cmd": "get_account_units",
-                    "device_id": "B4302ACA-153B-44A4-8204-5921197E8D19",
-                    "account_token": "c31a1e03-1017-4048-b0bd-423da512f4c2"
+                    "$ref": "#/definitions/account_token"
                 }
             },
             "type": "object"
@@ -2921,16 +2847,13 @@
                     ]
                 },
                 "account_token": {
-                    "description": "Auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/account_token"
                 },
                 "device_id": {
-                    "type": "string",
-                    "description": "Mobile device ID."
+                    "$ref": "#/definitions/device_id"
                 },
                 "token": {
-                    "description": "Charger token.",
-                    "type": "string"
+                    "$ref": "#/definitions/token"
                 }
             },
             "type": "object"
@@ -2947,6 +2870,12 @@
             "type": "object"
         },
         "set_notifications": {
+            "required": [
+                "cmd",
+                "token",
+                "account_token",
+                "device_id"
+            ],
             "properties": {
                 "cmd": {
                     "type": "string",
@@ -2956,22 +2885,34 @@
                     ]
                 },
                 "account_token": {
-                    "description": "Account auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/account_token"
                 },
                 "token": {
-                    "description": "JuiceNet device auth token.",
-                    "type": "string"
+                    "$ref": "#/definitions/token"
                 },
                 "device_id": {
-                    "type": "string",
-                    "description": "Mobile device ID."
+                    "$ref": "#/definitions/device_id"
                 },
                 "notifications": {
                     "$ref": "#/definitions/notification_settings"
                 }
             },
             "type": "object"
+        },
+        "device_id": {
+                    "type": "string",
+                    "example": "DEE328A7-B7F4-4235-9A6E-CF77C0C1FA74",
+                    "description": "Mobile device ID."
+        },
+        "account_token": {
+            "description": "Auth token.",
+            "example": "c31a1e00-1017-4048-b0bd-423da512f4c2",
+            "type": "string"
+        },
+        "token": {
+            "description": "JuiceNet device auth token.",
+            "example": "2739f8604e4c4e30a749fe07801d8575",
+            "type": "string"
         },
         "success_response": {
             "properties": {
