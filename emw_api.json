@@ -1193,8 +1193,7 @@
                     "$ref": "#/definitions/token"
                 },
                 "device_id": {
-                    "type": "string",
-                    "description": "Mobile device ID."
+                    "$ref": "#/definitions/device_id"
                 }
             },
             "type": "object"
@@ -1302,8 +1301,7 @@
                     "$ref": "#/definitions/token"
                 },
                 "device_id": {
-                    "type": "string",
-                    "description": "Mobile device ID."
+                    "$ref": "#/definitions/device_id"
                 }
             },
             "type": "object"
@@ -1459,8 +1457,7 @@
                     "$ref": "#/definitions/token"
                 },
                 "device_id": {
-                    "type": "string",
-                    "description": "Mobile device ID."
+                    "$ref": "#/definitions/device_id"
                 }
             },
             "type": "object"
@@ -2014,8 +2011,7 @@
                     "$ref": "#/definitions/token"
                 },
                 "device_id": {
-                    "type": "string",
-                    "description": "Mobile device ID."
+                    "$ref": "#/definitions/device_id"
                 }
             },
             "type": "object"
@@ -2418,8 +2414,7 @@
                     ]
                 },
                 "device_id": {
-                    "type": "string",
-                    "description": "Mobile device ID to pair with."
+                    "$ref": "#/definitions/device_id"
                 },
                 "ID": {
                     "type": "string",
@@ -2465,8 +2460,7 @@
                     ]
                 },
                 "device_id": {
-                    "type": "string",
-                    "description": "Mobile device ID to pair with."
+                    "$ref": "#/definitions/device_id"
                 },
                 "account_token": {
                     "$ref": "#/definitions/account_token"
@@ -2499,8 +2493,7 @@
                     "description": "JuiceNet device ID."
                 },
                 "device_id": {
-                    "type": "string",
-                    "description": "Mobile device ID to pair with."
+                    "$ref": "#/definitions/device_id"
                 },
                 "pin": {
                     "type": "string",
@@ -2527,8 +2520,7 @@
                     "description": "JuiceNet device ID."
                 },
                 "device_id": {
-                    "type": "string",
-                    "description": "Mobile device ID to pair with."
+                    "$ref": "#/definitions/device_id"
                 },
                 "user_message": {
                     "type": "string",
@@ -2678,8 +2670,7 @@
                     "description": "JuiceNet device ID."
                 },
                 "device_id": {
-                    "type": "string",
-                    "description": "Mobile device ID to pair with."
+                    "$ref": "#/definitions/device_id"
                 },
                 "step": {
                     "type": "number",
@@ -2702,8 +2693,7 @@
                     "description": "JuiceNet device ID."
                 },
                 "device_id": {
-                    "type": "string",
-                    "description": "Mobile device ID to pair with."
+                    "$ref": "#/definitions/device_id"
                 },
                 "user_message": {
                     "type": "string",
