@@ -2,7 +2,8 @@
     "swagger": "2.0",
     "info": {
         "version": "1.0.5",
-        "title": "Mobile app to web dashboard connection API"
+        "title": "Mobile app to web dashboard connection API",
+        "description": ""
     },
     "basePath": "/box_api_secure",
     "schemes": [
