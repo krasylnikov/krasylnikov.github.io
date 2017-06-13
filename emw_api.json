@@ -956,22 +956,48 @@
             "properties": {
                 "id": {
                     "type": "number",
+                    "example": 37,
                     "description": "The charging session ID."
                 },
                 "time_start": {
-                    "type": "number"
+                    "type": "number",
+                    "example": 1495085400,
+                    "description": "The session start time."
                 },
                 "time_end": {
-                    "type": "number"
+                    "type": "number",
+                    "example": 1495089000,
+                    "description": "The session end time."
                 },
                 "duration": {
-                    "type": "number"
+                    "type": "number",
+                    "example": 120,
+                    "description": "The session duration in seconds."
                 },
                 "wh_energy": {
-                    "type": "number"
+                    "type": "number",
+                    "example": 2000,
+                    "description": "The energy."
                 },
                 "juice_points": {
-                    "type": "number"
+                    "type": "number",
+                    "example": 1606,
+                    "description": "Juice points."
+                },
+                "juice_time": {
+                    "type": "number",
+                    "example": 3600,
+                    "description": "The bonus time for points."
+                },
+                "reason": {
+                    "type": "string",
+                    "example": "Earn Points for Session",
+                    "description": "The reason of poins obtaining/restriction."
+                },
+                "jp_creation_time": {
+                    "type": "number",
+                    "example": 1495089000,
+                    "description": "The time when points was calculated for the session."
                 }
             },
             "type": "object"
