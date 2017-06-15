@@ -1304,7 +1304,7 @@
                         "history": {
                             "$ref": "#/definitions/restriction"
                         },
-                        "get_pin": {
+                        "get_share_pin": {
                             "$ref": "#/definitions/restriction"
                         }
                     },
