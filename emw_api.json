@@ -1300,6 +1300,12 @@
                         },
                         "set_override": {
                             "$ref": "#/definitions/restriction"
+                        },
+                        "history": {
+                            "$ref": "#/definitions/restriction"
+                        },
+                        "get_pin": {
+                            "$ref": "#/definitions/restriction"
                         }
                     },
                     "type": "object"
