@@ -1020,7 +1020,9 @@
         "restriction": {
             "properties": {
                 "message": {
-                    "type": "string"
+                    "type": "string",
+                    "example": "The function isn't available for your box. Upgrade to Pro?",
+                    "description": "The reason why some function is restricted."
                 },
                 "activation_url": {
                     "type": "string"
