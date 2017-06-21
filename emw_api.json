@@ -237,7 +237,7 @@
                 "tags": [
                     "box_pin"
                 ],
-                "description": "Try to add JuiceNet device to the account.",
+                "description": "Try to add JuiceNet device to the account by its ID. If JNDevice doesn't owned by any other user it will be added. If JNDevice already owned by someone the user will be prompted to input a sharing pin.",
                 "parameters": [
                     {
                         "description": "Command to add JuiceNet device to the account",
@@ -839,7 +839,7 @@
                 "tags": [
                     "box_api_secure"
                 ],
-                "description": "Add JuiceNet device to dashboard.",
+                "description": "Add JuiceNet device to the dashboard if you have a JuiceNet device token. The command used to migrate from the legacy flow when we have no accounts and all JNDevices was bound with mobile phones.",
                 "parameters": [
                     {
                         "description": "Add JuiceNet device to dashboard command object.",
