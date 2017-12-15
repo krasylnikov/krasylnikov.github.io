@@ -357,6 +357,45 @@
         }
       }
     },
+    "/get_units_byIP": {
+      "post": {
+        "tags": [
+          "box_pin"
+        ],
+        "description": "Get the list of JNDevice, associated with the same IP address.",
+        "parameters": [
+          {
+            "$ref": "#/parameters/Accept-Language"
+          },
+          {
+            "$ref": "#/parameters/api-version"
+          },
+          {
+            "$ref": "#/parameters/app-bundle-identifier"
+          },
+          {
+            "$ref": "#/parameters/app-version"
+          },
+          {
+            "description": "Command to add JuiceNet device to the account",
+            "in": "body",
+            "name": "cmd",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/get_units_byIP"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Response.",
+            "schema": {
+              "$ref": "#/definitions/get_units_byIP_response"
+            }
+          }
+        }
+      }
+    },
     "/add_unit": {
       "post": {
         "tags": [
@@ -1561,6 +1600,24 @@
       },
       "type": "object"
     },
+    "device_by_ip": {
+      "properties": {
+        "unit_ID": {
+          "description": "JuiceNet device ID.",
+          "example": "0814081549221535522516018953",
+          "type": "string"
+        },
+        "time_last_ping": {
+          "example": 1513357476,
+          "type": "number"
+        },
+        "unit_name": {
+          "description": "Charger name.",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
     "set_info": {
       "required": [
         "cmd",
@@ -1728,6 +1785,9 @@
         },
         "policy": {
           "$ref": "#/definitions/policy"
+        },
+        "jaas_product": {
+          "$ref": "#/definitions/jaas_product"
         },
         "restrictions": {
           "properties": {
@@ -3015,6 +3075,52 @@
       },
       "type": "object"
     },
+    "get_units_byIP": {
+      "required": [
+        "cmd",
+        "device_id",
+        "account_token",
+        "sec_since"
+      ],
+      "properties": {
+        "cmd": {
+          "type": "string",
+          "description": "Command code.",
+          "enum": [
+            "get_units_byIP"
+          ]
+        },
+        "device_id": {
+          "$ref": "#/definitions/device_id"
+        },
+        "account_token": {
+          "$ref": "#/definitions/account_token"
+        },
+        "sec_since": {
+          "example": 300,
+          "type": "number"
+        }
+      },
+      "type": "object"
+    },
+    "get_units_byIP_response": {
+      "properties": {
+        "caller_ip": {
+          "example": "31.202.31.62:55723",
+          "type": "string"
+        },
+        "success": {
+          "type": "boolean"
+        },
+        "units": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/device_by_ip"
+          }
+        }
+      },
+      "type": "object"
+    },
     "add_unit": {
       "required": [
         "cmd",
@@ -3363,6 +3469,32 @@
         },
         "notifications": {
           "$ref": "#/definitions/notification_settings"
+        }
+      },
+      "type": "object"
+    },
+    "jaas_product": {
+      "description": "JuiceNet as a service status.",
+      "properties": {
+        "product_id": {
+          "description": "The subscription type.",
+          "example": 5,
+          "type": "number"
+        },
+        "max_current": {
+          "description": "Maximum allowed amerage.",
+          "example": 30,
+          "type": "number"
+        },
+        "exp_date": {
+          "description": "Expiration date timestamp.",
+          "example": 1513296000,
+          "type": "number"
+        },
+        "product_name": {
+          "description": "The product name should be shown to the user.",
+          "example": "JaaSPlan30A",
+          "type": "string"
         }
       },
       "type": "object"
