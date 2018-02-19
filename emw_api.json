@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "version": "1.0.5",
+    "version": "1.0.6",
     "title": "Mobile app to web dashboard connection API",
     "description": ""
   },
@@ -1683,6 +1683,18 @@
         "garage_id": {
           "type": "string"
         },
+        "minimal_charge": {
+          "description": "The minimal charge setting (Wh).",
+          "type": "number",
+          "example": 6600
+        },
+        "efficiency": {
+          "type": "number",
+          "format": "float",
+          "minimum": 0,
+          "maximum": 1,
+          "example": 0.92
+        },
         "cars": {
           "type": "array",
           "items": {
@@ -1776,6 +1788,18 @@
         },
         "garage_id": {
           "type": "string"
+        },
+        "minimal_charge": {
+          "description": "The minimal charge setting (Wh).",
+          "type": "number",
+          "example": 6600
+        },
+        "efficiency": {
+          "type": "number",
+          "format": "float",
+          "minimum": 0,
+          "maximum": 1,
+          "example": 0.92
         },
         "cars": {
           "type": "array",
