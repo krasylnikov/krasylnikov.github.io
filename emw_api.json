@@ -1,7 +1,7 @@
 {
   "swagger": "2.0",
   "info": {
-    "version": "1.0.6",
+    "version": "1.0.7",
     "title": "Mobile app to web dashboard connection API",
     "description": ""
   },
@@ -1703,6 +1703,9 @@
         },
         "policy": {
           "$ref": "#/definitions/policy"
+        },
+        "coordinates": {
+          "$ref": "#/definitions/coordinates"
         }
       },
       "type": "object"
@@ -1812,6 +1815,9 @@
         },
         "jaas_product": {
           "$ref": "#/definitions/jaas_product"
+        },
+        "coordinates": {
+          "$ref": "#/definitions/coordinates"
         },
         "restrictions": {
           "properties": {
@@ -2985,6 +2991,9 @@
         "pin": {
           "type": "string",
           "description": "The password to access JuiceNet device."
+        },
+        "coordinates": {
+          "$ref": "#/definitions/coordinates"
         }
       },
       "type": "object"
@@ -3174,6 +3183,9 @@
         "ID": {
           "description": "JuiceNet device ID.",
           "type": "string"
+        },
+        "coordinates": {
+          "$ref": "#/definitions/coordinates"
         }
       },
       "type": "object"
@@ -3287,6 +3299,9 @@
         "session": {
           "type": "string",
           "description": "The password resetting session ID. Will be returned from the server after step #1."
+        },
+        "coordinates": {
+          "$ref": "#/definitions/coordinates"
         }
       },
       "type": "object"
@@ -3542,6 +3557,21 @@
       "description": "JuiceNet device auth token.",
       "example": "2739f8604e4c4e30a749fe07801d8575",
       "type": "string"
+    },
+    "coordinates": {
+      "properties": {
+        "latitude": {
+          "type": "number",
+          "format": "double",
+          "example": 49.9935
+        },
+        "longitude": {
+          "type": "number",
+          "format": "double",
+          "example": 36.2304
+        }
+      },
+      "type": "object"
     },
     "success_response": {
       "properties": {
