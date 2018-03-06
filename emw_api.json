@@ -2991,9 +2991,6 @@
         "pin": {
           "type": "string",
           "description": "The password to access JuiceNet device."
-        },
-        "coordinates": {
-          "$ref": "#/definitions/coordinates"
         }
       },
       "type": "object"
@@ -3183,9 +3180,6 @@
         "ID": {
           "description": "JuiceNet device ID.",
           "type": "string"
-        },
-        "coordinates": {
-          "$ref": "#/definitions/coordinates"
         }
       },
       "type": "object"
@@ -3299,9 +3293,6 @@
         "session": {
           "type": "string",
           "description": "The password resetting session ID. Will be returned from the server after step #1."
-        },
-        "coordinates": {
-          "$ref": "#/definitions/coordinates"
         }
       },
       "type": "object"
