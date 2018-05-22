@@ -1683,6 +1683,9 @@
         "garage_id": {
           "type": "string"
         },
+        "is_3phase_input_power": {
+          "type": "number"
+        },
         "minimal_charge": {
           "description": "The minimal charge setting (Wh).",
           "type": "number",
@@ -1791,6 +1794,9 @@
         },
         "garage_id": {
           "type": "string"
+        },
+        "is_3phase_input_power": {
+          "type": "number"
         },
         "minimal_charge": {
           "description": "The minimal charge setting (Wh).",
