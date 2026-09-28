@@ -1,8 +1,0 @@
-    properties:
-      success:
-        type: boolean
-      sessions:
-        type: array
-        items:
-          $ref: "#/definitions/session"
-    type: object

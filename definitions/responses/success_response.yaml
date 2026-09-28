@@ -1,4 +1,0 @@
-properties:
-    success:
-        type: boolean
-type: object

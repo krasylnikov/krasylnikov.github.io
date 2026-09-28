@@ -1,6 +1,0 @@
-.DS_Store
-.vscode/
-.idea/
-*.log
-__pycache__/
-.venv/

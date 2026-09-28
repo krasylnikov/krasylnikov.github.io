@@ -1,8 +1,0 @@
-properties:
-  t:
-    type: number
-    description: "Plot point time."
-  v:
-    type: number
-    description: "Plot point value."
-type: object

@@ -1,6 +1,0 @@
-properties:
-  nonstop:
-    type: number
-  actual:
-    type: number
-type: object

@@ -1,9 +1,0 @@
-required:
-  - cmd
-properties:
-  cmd:
-    type: string
-    description: "Command code."
-    enum:
-      - get_server_info
-type: object
