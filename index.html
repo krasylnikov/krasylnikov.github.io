@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dmytro Krasylnikov — backend and mobile software engineer with 19 years of experience.">
+  <title>Dmytro Krasylnikov — Software Engineer</title>
+  <style>
+    :root {
+      --ink: #14292d;
+      --muted: #647578;
+      --paper: #f3f0e8;
+      --card: #fffdf7;
+      --accent: #df5f3f;
+      --aqua: #9fc9c0;
+      --line: #d9d7ce;
+      --display: Georgia, "Times New Roman", serif;
+      --body: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: var(--body);
+      line-height: 1.65;
+    }
+    a { color: inherit; }
+    a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
+    .skip-link {
+      position: fixed;
+      z-index: 10;
+      top: 12px;
+      left: 12px;
+      padding: 10px 16px;
+      color: var(--paper);
+      background: var(--ink);
+      transform: translateY(-160%);
+      transition: transform .2s ease;
+    }
+    .skip-link:focus { transform: translateY(0); }
+
+    .site-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1240px;
+      margin: auto;
+      padding: 28px 32px;
+    }
+    .monogram {
+      display: grid;
+      width: 48px;
+      height: 48px;
+      place-items: center;
+      border: 1px solid var(--ink);
+      border-radius: 50%;
+      font-family: var(--display);
+      font-size: 18px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+    nav { display: flex; align-items: center; gap: 28px; }
+    nav a { font-size: 13px; font-weight: 700; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; }
+    .download { padding: 9px 16px; border: 1px solid var(--ink); border-radius: 999px; }
+
+    main { overflow: hidden; }
+    .hero {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(0, 1.45fr) minmax(280px, .55fr);
+      gap: 80px;
+      max-width: 1180px;
+      min-height: 670px;
+      margin: 34px auto 0;
+      padding: 70px 32px 90px;
+      align-items: center;
+    }
+    .hero::before {
+      position: absolute;
+      z-index: -1;
+      top: 12px;
+      right: -145px;
+      width: 480px;
+      height: 480px;
+      border: 1px solid rgba(20, 41, 45, .18);
+      border-radius: 50%;
+      content: "";
+    }
+    .eyebrow { margin: 0 0 18px; color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      max-width: 850px;
+      margin-bottom: 28px;
+      font-family: var(--display);
+      font-size: clamp(58px, 9.2vw, 126px);
+      font-weight: 400;
+      letter-spacing: -.065em;
+      line-height: .82;
+    }
+    h1 span { display: block; color: var(--accent); font-style: italic; }
+    .intro { max-width: 650px; margin-bottom: 34px; font-size: clamp(17px, 2vw, 21px); }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-height: 48px;
+      padding: 0 20px;
+      border: 1px solid var(--ink);
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .04em;
+      text-decoration: none;
+    }
+    .button.primary { color: var(--paper); background: var(--ink); }
+    .button:hover { transform: translateY(-2px); }
+    .hero-note { align-self: end; padding-bottom: 12px; }
+    .hero-note .number { display: block; font-family: var(--display); font-size: 88px; line-height: 1; }
+    .hero-note p { max-width: 210px; color: var(--muted); font-size: 14px; }
+
+    .band { background: var(--ink); color: #f8f5ed; }
+    .section { max-width: 1180px; margin: auto; padding: 110px 32px; }
+    .section-heading { display: grid; grid-template-columns: .45fr 1.55fr; gap: 60px; margin-bottom: 70px; }
+    .section-label { color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    h2 { max-width: 770px; font-family: var(--display); font-size: clamp(38px, 5vw, 68px); font-weight: 400; letter-spacing: -.045em; line-height: 1.02; }
+
+    .timeline { margin-left: calc(22.5% + 60px); }
+    .job {
+      display: grid;
+      grid-template-columns: 175px 1fr;
+      gap: 30px;
+      padding: 35px 0;
+      border-top: 1px solid rgba(255,255,255,.22);
+    }
+    .job time, .job .place { color: #abc0bd; font-size: 13px; }
+    .job h3 { margin-bottom: 3px; font-family: var(--display); font-size: 27px; font-weight: 400; }
+    .job p { margin-bottom: 0; color: #c7d2cf; }
+    .job .company { color: var(--aqua); font-size: 14px; font-weight: 700; }
+
+    .expertise { display: grid; grid-template-columns: 1fr 1fr; gap: 90px; }
+    .expertise h2 { margin-bottom: 36px; }
+    .skill-list { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; list-style: none; }
+    .skill-list li { padding: 10px 15px; border: 1px solid #b7bbb4; border-radius: 999px; background: var(--card); font-size: 14px; }
+    .quote { padding: 45px; border-left: 5px solid var(--accent); background: #e6ded1; }
+    .quote p { margin: 0; font-family: var(--display); font-size: clamp(24px, 3vw, 38px); line-height: 1.22; }
+    .languages { margin-top: 34px; }
+    .languages h3 { margin-bottom: 12px; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; }
+    .languages p { color: var(--muted); }
+
+    .education { background: var(--aqua); }
+    .education-grid { display: grid; grid-template-columns: .45fr 1.55fr; gap: 60px; }
+    .schools { display: grid; gap: 18px; }
+    .school { padding: 32px; background: rgba(255,253,247,.65); }
+    .school h3 { margin-bottom: 8px; font-family: var(--display); font-size: 25px; font-weight: 400; line-height: 1.2; }
+    .school p { margin-bottom: 0; color: #42595c; }
+
+    footer { padding: 85px 32px 35px; color: var(--paper); background: var(--accent); }
+    .footer-inner { display: grid; grid-template-columns: 1fr auto; gap: 50px; max-width: 1116px; margin: auto; align-items: end; }
+    footer h2 { max-width: 780px; margin-bottom: 22px; font-size: clamp(48px, 8vw, 100px); }
+    footer .email { font-size: clamp(18px, 2.5vw, 28px); font-weight: 700; text-underline-offset: 6px; }
+    .footer-links { display: grid; gap: 12px; text-align: right; }
+    .footer-links a { font-weight: 700; text-underline-offset: 4px; }
+    .copyright { max-width: 1116px; margin: 70px auto 0; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.4); font-size: 12px; }
+
+    @media (max-width: 760px) {
+      .site-header { padding: 20px; }
+      nav a:not(.download) { display: none; }
+      .hero { grid-template-columns: 1fr; gap: 24px; min-height: auto; margin-top: 0; padding: 65px 20px 80px; }
+      .hero::before { top: 40px; right: -270px; }
+      h1 { font-size: clamp(55px, 21vw, 86px); }
+      .hero-note { display: flex; align-items: center; gap: 18px; }
+      .hero-note .number { font-size: 65px; }
+      .hero-note p { margin: 0; }
+      .section { padding: 75px 20px; }
+      .section-heading, .education-grid, .expertise { grid-template-columns: 1fr; gap: 22px; }
+      .timeline { margin-left: 0; }
+      .job { grid-template-columns: 1fr; gap: 8px; }
+      .quote { padding: 30px; }
+      footer { padding-inline: 20px; }
+      .footer-inner { grid-template-columns: 1fr; }
+      .footer-links { text-align: left; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+
+    @media print {
+      @page { margin: 16mm; }
+      body { color: #000; background: #fff; font-size: 10pt; }
+      .site-header, .hero-actions, footer { display: none; }
+      .hero, .section { max-width: none; min-height: 0; padding: 18px 0; }
+      .hero { grid-template-columns: 1fr auto; margin: 0; }
+      .hero::before { display: none; }
+      h1 { font-size: 52pt; }
+      h2 { font-size: 25pt; }
+      .band, .education { color: #000; background: #fff; }
+      .section-heading { margin-bottom: 20px; }
+      .job { break-inside: avoid; padding: 12px 0; border-color: #aaa; }
+      .job time, .job .place, .job p, .job .company { color: #222; }
+      .quote, .school { break-inside: avoid; background: #eee; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <a class="monogram" href="#main-content" aria-label="Back to top">DK</a>
+    <nav aria-label="Primary navigation">
+      <a href="#experience">Experience</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#education">Education</a>
+      <a class="download" href="profile.pdf" download>Résumé PDF ↓</a>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <p class="eyebrow">Back-end &amp; mobile engineer · Ukraine</p>
+        <h1 id="hero-title">Dmytro <span>Krasylnikov</span></h1>
+        <p class="intro">I build thoughtful, dependable software—from robust back-end systems to polished mobile experiences.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="mailto:krasylnikov@gmail.com">Start a conversation →</a>
+          <a class="button" href="#experience">Explore my work</a>
+        </div>
+      </div>
+      <aside class="hero-note" aria-label="Years of experience">
+        <span class="number">19</span>
+        <p>years at Design and Test Lab, growing from malware analysis to mobile engineering leadership.</p>
+      </aside>
+    </section>
+
+    <section class="band" id="experience" aria-labelledby="experience-title">
+      <div class="section">
+        <div class="section-heading">
+          <p class="section-label">01 / Experience</p>
+          <h2 id="experience-title">A career built across mobile, security, and back-end engineering.</h2>
+        </div>
+        <div class="timeline">
+          <article class="job">
+            <div><time datetime="2026-01">2026 — Present</time><div class="place">Ukraine</div></div>
+            <div><h3>Back End Developer</h3><p class="company">111Techs</p></div>
+          </article>
+          <article class="job">
+            <div><time datetime="2024-01">2024 — 2025</time><div class="place">Ukraine</div></div>
+            <div><h3>Lead Mobile App Developer</h3><p class="company">Design and Test Lab</p></div>
+          </article>
+          <article class="job">
+            <div><time datetime="2020-06">2020 — 2024</time></div>
+            <div><h3>Lead iOS Developer</h3><p class="company">Design and Test Lab</p></div>
+          </article>
+          <article class="job">
+            <div><time datetime="2018-11">2018 — 2020</time></div>
+            <div><h3>Lead Xamarin Developer</h3><p class="company">Design and Test Lab</p></div>
+          </article>
+          <article class="job">
+            <div><time datetime="2011-08">2011 — 2018</time></div>
+            <div><h3>Lead iOS Developer</h3><p class="company">Design and Test Lab</p></div>
+          </article>
+          <article class="job">
+            <div><time datetime="2007-01">2007 — 2011</time></div>
+            <div><h3>Malware Analyst</h3><p class="company">Design and Test Lab</p></div>
+          </article>
+          <article class="job">
+            <div><time datetime="2005-08">2005 — 2007</time><div class="place">Kharkiv Region, Ukraine</div></div>
+            <div><h3>Engineer</h3><p class="company">Research Institute for Radio Measurement</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section expertise" id="expertise" aria-labelledby="expertise-title">
+      <div>
+        <p class="section-label">02 / Expertise</p>
+        <h2 id="expertise-title">Broad experience, focused execution.</h2>
+        <ul class="skill-list" aria-label="Top skills">
+          <li>Python</li><li>Back-end development</li><li>iOS</li><li>Flutter</li><li>Xamarin</li><li>Bluetooth Low Energy</li><li>Mobile architecture</li><li>Malware analysis</li>
+        </ul>
+        <div class="languages">
+          <h3>Languages</h3>
+          <p>Ukrainian · English · Russian</p>
+        </div>
+      </div>
+      <div class="quote" aria-label="Professional summary">
+        <p>Experienced lead software engineer with a demonstrated history in information technology and services.</p>
+      </div>
+    </section>
+
+    <section class="education" id="education" aria-labelledby="education-title">
+      <div class="section education-grid">
+        <p class="section-label">03 / Education</p>
+        <div>
+          <h2 id="education-title">Computer engineering foundations.</h2>
+          <div class="schools">
+            <article class="school">
+              <h3>Kharkiv National University of Radio Electronics</h3>
+              <p>Bachelor, Specialist · Computer Engineering · 2000—2005</p>
+            </article>
+            <article class="school">
+              <h3>Kharkiv State Technical University of Radio Electronics</h3>
+              <p>Bachelor, Specialist · Computer Engineering · 2000—2005</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <p class="section-label">Let’s build something solid.</p>
+        <h2>Have a problem worth solving?</h2>
+        <a class="email" href="mailto:krasylnikov@gmail.com">krasylnikov@gmail.com</a>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/dmytro-krasylnikov-5a0763a7">LinkedIn ↗</a>
+        <a href="profile.pdf" download>Download résumé ↓</a>
+      </div>
+    </div>
+    <p class="copyright">© 2026 Dmytro Krasylnikov · Ukraine</p>
+  </footer>
+</body>
+</html>
