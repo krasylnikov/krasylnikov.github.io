@@ -3,7 +3,11 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Dmytro Krasylnikov — backend and mobile software engineer with 19 years of experience.">
+  <meta name="description" content="Dmytro Krasylnikov — backend and mobile software engineer with more than two decades of experience.">
+  <meta name="theme-color" content="#f3f0e8">
+  <meta property="og:title" content="Dmytro Krasylnikov — Software Engineer">
+  <meta property="og:description" content="Backend and mobile software engineer building dependable products and teams.">
+  <meta property="og:type" content="website">
   <title>Dmytro Krasylnikov — Software Engineer</title>
   <style>
     :root {
@@ -11,7 +15,8 @@
       --muted: #647578;
       --paper: #f3f0e8;
       --card: #fffdf7;
-      --accent: #df5f3f;
+      --accent: #b84127;
+      --accent-bright: #ef8064;
       --aqua: #9fc9c0;
       --line: #d9d7ce;
       --display: Georgia, "Times New Roman", serif;
@@ -27,6 +32,7 @@
       font-family: var(--body);
       line-height: 1.65;
     }
+    ::selection { color: var(--paper); background: var(--ink); }
     a { color: inherit; }
     a:focus-visible { outline: 3px solid var(--accent); outline-offset: 4px; }
     .skip-link {
@@ -43,12 +49,19 @@
     .skip-link:focus { transform: translateY(0); }
 
     .site-header {
+      position: sticky;
+      z-index: 5;
+      top: 0;
       display: flex;
       align-items: center;
       justify-content: space-between;
       max-width: 1240px;
       margin: auto;
-      padding: 28px 32px;
+      padding: 20px 32px;
+      background: rgba(243, 240, 232, .88);
+      border-bottom: 1px solid transparent;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
     }
     .monogram {
       display: grid;
@@ -62,11 +75,16 @@
       font-weight: 700;
       text-decoration: none;
     }
+    .monogram, nav a, .button, .footer-links a { transition: color .2s ease, background-color .2s ease, border-color .2s ease, transform .2s ease; }
+    .monogram:hover { color: var(--paper); background: var(--ink); transform: rotate(-6deg); }
     nav { display: flex; align-items: center; gap: 28px; }
     nav a { font-size: 13px; font-weight: 700; letter-spacing: .08em; text-decoration: none; text-transform: uppercase; }
+    nav a:not(.download):hover { color: var(--accent); }
     .download { padding: 9px 16px; border: 1px solid var(--ink); border-radius: 999px; }
+    .download:hover { color: var(--paper); background: var(--ink); }
 
     main { overflow: hidden; }
+    section[id] { scroll-margin-top: 90px; }
     .hero {
       position: relative;
       display: grid;
@@ -117,8 +135,9 @@
       text-decoration: none;
     }
     .button.primary { color: var(--paper); background: var(--ink); }
-    .button:hover { transform: translateY(-2px); }
-    .hero-note { align-self: end; padding-bottom: 12px; }
+    .button:hover { color: var(--paper); background: var(--accent); border-color: var(--accent); transform: translateY(-2px); }
+    .button.primary:hover { background: var(--accent); border-color: var(--accent); }
+    .hero-note { align-self: end; padding: 26px; border: 1px solid rgba(20, 41, 45, .2); background: rgba(255, 253, 247, .45); }
     .hero-note .number { display: block; font-family: var(--display); font-size: 88px; line-height: 1; }
     .hero-note p { max-width: 210px; color: var(--muted); font-size: 14px; }
 
@@ -126,6 +145,7 @@
     .section { max-width: 1180px; margin: auto; padding: 110px 32px; }
     .section-heading { display: grid; grid-template-columns: .45fr 1.55fr; gap: 60px; margin-bottom: 70px; }
     .section-label { color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+    .band .section-label { color: var(--accent-bright); }
     h2 { max-width: 770px; font-family: var(--display); font-size: clamp(38px, 5vw, 68px); font-weight: 400; letter-spacing: -.045em; line-height: 1.02; }
 
     .timeline { margin-left: calc(22.5% + 60px); }
@@ -136,6 +156,8 @@
       padding: 35px 0;
       border-top: 1px solid rgba(255,255,255,.22);
     }
+    .job:last-child { border-bottom: 1px solid rgba(255,255,255,.22); }
+    .job h3, .school h3 { text-wrap: balance; }
     .job time, .job .place { color: #abc0bd; font-size: 13px; }
     .job h3 { margin-bottom: 3px; font-family: var(--display); font-size: 27px; font-weight: 400; }
     .job p { margin-bottom: 0; color: #c7d2cf; }
@@ -145,6 +167,7 @@
     .expertise h2 { margin-bottom: 36px; }
     .skill-list { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; list-style: none; }
     .skill-list li { padding: 10px 15px; border: 1px solid #b7bbb4; border-radius: 999px; background: var(--card); font-size: 14px; }
+    .skill-list li:first-child { color: var(--paper); background: var(--ink); border-color: var(--ink); }
     .quote { padding: 45px; border-left: 5px solid var(--accent); background: #e6ded1; }
     .quote p { margin: 0; font-family: var(--display); font-size: clamp(24px, 3vw, 38px); line-height: 1.22; }
     .languages { margin-top: 34px; }
@@ -164,6 +187,7 @@
     footer .email { font-size: clamp(18px, 2.5vw, 28px); font-weight: 700; text-underline-offset: 6px; }
     .footer-links { display: grid; gap: 12px; text-align: right; }
     .footer-links a { font-weight: 700; text-underline-offset: 4px; }
+    .footer-links a:hover, footer .email:hover { text-decoration-thickness: 3px; }
     .copyright { max-width: 1116px; margin: 70px auto 0; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.4); font-size: 12px; }
 
     @media (max-width: 760px) {
@@ -172,7 +196,7 @@
       .hero { grid-template-columns: 1fr; gap: 24px; min-height: auto; margin-top: 0; padding: 65px 20px 80px; }
       .hero::before { top: 40px; right: -270px; }
       h1 { font-size: clamp(55px, 21vw, 86px); }
-      .hero-note { display: flex; align-items: center; gap: 18px; }
+      .hero-note { display: flex; align-items: center; gap: 18px; padding: 20px; }
       .hero-note .number { font-size: 65px; }
       .hero-note p { margin: 0; }
       .section { padding: 75px 20px; }
@@ -188,6 +212,11 @@
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
       *, *::before, *::after { transition-duration: .01ms !important; }
+    }
+
+    @media (prefers-contrast: more) {
+      :root { --muted: #42575a; --line: #9b9d96; }
+      .hero-note, .skill-list li, .download { border-width: 2px; }
     }
 
     @media print {
@@ -226,12 +255,12 @@
         <h1 id="hero-title">Dmytro <span>Krasylnikov</span></h1>
         <p class="intro">I build thoughtful, dependable software—from robust back-end systems to polished mobile experiences.</p>
         <div class="hero-actions">
-          <a class="button primary" href="mailto:krasylnikov@gmail.com">Start a conversation →</a>
+          <a class="button primary" href="mailto:krasylnikov@gmail.com?subject=Let%27s%20work%20together">Start a conversation <span aria-hidden="true">→</span></a>
           <a class="button" href="#experience">Explore my work</a>
         </div>
       </div>
       <aside class="hero-note" aria-label="Years of experience">
-        <span class="number">19</span>
+        <span class="number" aria-hidden="true">19</span>
         <p>years at Design and Test Lab, growing from malware analysis to mobile engineering leadership.</p>
       </aside>
     </section>
@@ -320,8 +349,8 @@
         <a class="email" href="mailto:krasylnikov@gmail.com">krasylnikov@gmail.com</a>
       </div>
       <div class="footer-links">
-        <a href="https://www.linkedin.com/in/dmytro-krasylnikov-5a0763a7">LinkedIn ↗</a>
-        <a href="profile.pdf" download>Download résumé ↓</a>
+        <a href="https://www.linkedin.com/in/dmytro-krasylnikov-5a0763a7" rel="me">LinkedIn <span aria-hidden="true">↗</span></a>
+        <a href="profile.pdf" download>Download résumé <span aria-hidden="true">↓</span></a>
       </div>
     </div>
     <p class="copyright">© 2026 Dmytro Krasylnikov · Ukraine</p>
