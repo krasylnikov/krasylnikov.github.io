@@ -1,6 +1,6 @@
 # Dmytro Krasylnikov — Portfolio
 
-A lightweight, single-page portfolio for software engineer Dmytro Krasylnikov. The site presents professional experience, technical expertise, education, contact details, and a downloadable résumé.
+A lightweight, single-page portfolio for software engineer Dmytro Krasylnikov. The site presents professional experience, technical expertise, and education.
 
 ## Overview
 
@@ -12,14 +12,12 @@ Highlights include:
 - Accessible navigation, landmarks, labels, and keyboard focus styles
 - Reduced-motion support
 - Print-specific styling
-- A downloadable PDF résumé
 
 ## Repository structure
 
 ```text
 .
 ├── index.html   # Portfolio content and styles
-├── profile.pdf  # Downloadable résumé
 └── README.md    # Project documentation
 ```
 
@@ -36,15 +34,9 @@ Then visit [http://localhost:8000](http://localhost:8000).
 ## Make changes
 
 - Update page content and styling in `index.html`.
-- Replace `profile.pdf` to publish a new résumé while keeping existing download links intact.
 - Check both desktop and mobile layouts after making visual changes.
 - Verify the print preview when changing content or print styles.
 
 ## Deployment
 
 The repository is ready to be hosted as a static site with GitHub Pages. Configure Pages to deploy from the branch and root directory containing `index.html`; subsequent pushes to that source will publish the updated site.
-
-## Contact
-
-- Email: [krasylnikov@gmail.com](mailto:krasylnikov@gmail.com)
-- LinkedIn: [Dmytro Krasylnikov](https://www.linkedin.com/in/dmytro-krasylnikov-5a0763a7)
