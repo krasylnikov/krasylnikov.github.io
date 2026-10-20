@@ -4,7 +4,7 @@ A lightweight, single-page portfolio for software engineer Dmytro Krasylnikov. T
 
 ## Overview
 
-The portfolio is a static website built with semantic HTML and embedded CSS. It has no JavaScript, package manager, build step, or third-party runtime dependencies.
+The portfolio is a static website built with semantic HTML and embedded CSS. A small JavaScript theme switch lets visitors choose between noir grayscale and Matrix black/green, remembering their choice in local storage. It has no package manager, build step, or third-party runtime dependencies.
 
 Highlights include:
 
@@ -40,3 +40,7 @@ Then visit [http://localhost:8000](http://localhost:8000).
 ## Deployment
 
 The repository is ready to be hosted as a static site with GitHub Pages. Configure Pages to deploy from the branch and root directory containing `index.html`; subsequent pushes to that source will publish the updated site.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
