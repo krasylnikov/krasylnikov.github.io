@@ -4,21 +4,22 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Dmytro Krasylnikov — backend and mobile software engineer with more than two decades of experience.">
-  <meta name="theme-color" content="#f3f0e8">
+  <meta name="theme-color" content="#101010">
   <meta property="og:title" content="Dmytro Krasylnikov — Software Engineer">
   <meta property="og:description" content="Backend and mobile software engineer building dependable products and teams.">
   <meta property="og:type" content="website">
   <title>Dmytro Krasylnikov — Software Engineer</title>
   <style>
     :root {
-      --ink: #14292d;
-      --muted: #647578;
-      --paper: #f3f0e8;
-      --card: #fffdf7;
-      --accent: #b84127;
-      --accent-bright: #ef8064;
-      --aqua: #9fc9c0;
-      --line: #d9d7ce;
+      color-scheme: dark;
+      --ink: #ededed;
+      --muted: #b0b0b0;
+      --paper: #101010;
+      --card: #1c1c1c;
+      --accent: #d0d0d0;
+      --accent-bright: #dedede;
+      --aqua: #242424;
+      --line: #444444;
       --display: Georgia, "Times New Roman", serif;
       --body: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
@@ -58,7 +59,7 @@
       max-width: 1240px;
       margin: auto;
       padding: 20px 32px;
-      background: rgba(243, 240, 232, .88);
+      background: rgba(16, 16, 16, .92);
       border-bottom: 1px solid transparent;
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
@@ -103,7 +104,7 @@
       right: -145px;
       width: 480px;
       height: 480px;
-      border: 1px solid rgba(20, 41, 45, .18);
+      border: 1px solid rgba(255, 255, 255, .18);
       border-radius: 50%;
       content: "";
     }
@@ -137,11 +138,11 @@
     .button.primary { color: var(--paper); background: var(--ink); }
     .button:hover { color: var(--paper); background: var(--accent); border-color: var(--accent); transform: translateY(-2px); }
     .button.primary:hover { background: var(--accent); border-color: var(--accent); }
-    .hero-note { align-self: end; padding: 26px; border: 1px solid rgba(20, 41, 45, .2); background: rgba(255, 253, 247, .45); }
+    .hero-note { align-self: end; padding: 26px; border: 1px solid rgba(255, 255, 255, .2); background: rgba(255, 255, 255, .04); }
     .hero-note .number { display: block; font-family: var(--display); font-size: 88px; line-height: 1; }
     .hero-note p { max-width: 210px; color: var(--muted); font-size: 14px; }
 
-    .band { background: var(--ink); color: #f8f5ed; }
+    .band { background: #080808; color: #ededed; }
     .section { max-width: 1180px; margin: auto; padding: 110px 32px; }
     .section-heading { display: grid; grid-template-columns: .45fr 1.55fr; gap: 60px; margin-bottom: 70px; }
     .section-label { color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
@@ -158,17 +159,17 @@
     }
     .job:last-child { border-bottom: 1px solid rgba(255,255,255,.22); }
     .job h3, .school h3 { text-wrap: balance; }
-    .job time, .job .place { color: #abc0bd; font-size: 13px; }
+    .job time, .job .place { color: #b8b8b8; font-size: 13px; }
     .job h3 { margin-bottom: 3px; font-family: var(--display); font-size: 27px; font-weight: 400; }
-    .job p { margin-bottom: 0; color: #c7d2cf; }
-    .job .company { color: var(--aqua); font-size: 14px; font-weight: 700; }
+    .job p { margin-bottom: 0; color: #cccccc; }
+    .job .company { color: #dedede; font-size: 14px; font-weight: 700; }
 
     .expertise { display: grid; grid-template-columns: 1fr 1fr; gap: 90px; }
     .expertise h2 { margin-bottom: 36px; }
     .skill-list { display: flex; flex-wrap: wrap; gap: 10px; padding: 0; list-style: none; }
-    .skill-list li { padding: 10px 15px; border: 1px solid #b7bbb4; border-radius: 999px; background: var(--card); font-size: 14px; }
+    .skill-list li { padding: 10px 15px; border: 1px solid #555555; border-radius: 999px; background: var(--card); font-size: 14px; }
     .skill-list li:first-child { color: var(--paper); background: var(--ink); border-color: var(--ink); }
-    .quote { padding: 45px; border-left: 5px solid var(--accent); background: #e6ded1; }
+    .quote { padding: 45px; border-left: 5px solid var(--accent); background: #202020; }
     .quote p { margin: 0; font-family: var(--display); font-size: clamp(24px, 3vw, 38px); line-height: 1.22; }
     .languages { margin-top: 34px; }
     .languages h3 { margin-bottom: 12px; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; }
@@ -177,11 +178,11 @@
     .education { background: var(--aqua); }
     .education-grid { display: grid; grid-template-columns: .45fr 1.55fr; gap: 60px; }
     .schools { display: grid; gap: 18px; }
-    .school { padding: 32px; background: rgba(255,253,247,.65); }
+    .school { padding: 32px; background: rgba(255,255,255,.05); }
     .school h3 { margin-bottom: 8px; font-family: var(--display); font-size: 25px; font-weight: 400; line-height: 1.2; }
-    .school p { margin-bottom: 0; color: #42595c; }
+    .school p { margin-bottom: 0; color: #b8b8b8; }
 
-    footer { padding: 85px 32px 35px; color: var(--paper); background: var(--accent); }
+    footer { padding: 85px 32px 35px; color: var(--ink); background: #080808; }
     .footer-inner { display: grid; grid-template-columns: 1fr auto; gap: 50px; max-width: 1116px; margin: auto; align-items: end; }
     footer h2 { max-width: 780px; margin-bottom: 22px; font-size: clamp(48px, 8vw, 100px); }
     .footer-links { display: grid; gap: 12px; text-align: right; }
@@ -214,12 +215,13 @@
     }
 
     @media (prefers-contrast: more) {
-      :root { --muted: #42575a; --line: #9b9d96; }
+      :root { --muted: #dedede; --line: #888888; }
       .hero-note, .skill-list li, .profile-link { border-width: 2px; }
     }
 
     @media print {
       @page { margin: 16mm; }
+      :root { color-scheme: light; --ink: #000; --muted: #333; --paper: #fff; --card: #fff; --accent: #333; --accent-bright: #333; --aqua: #eee; }
       body { color: #000; background: #fff; font-size: 10pt; }
       .site-header, .hero-actions, footer { display: none; }
       .hero, .section { max-width: none; min-height: 0; padding: 18px 0; }
@@ -234,6 +236,8 @@
       .quote, .school { break-inside: avoid; background: #eee; }
     }
   </style>
+  <link rel="stylesheet" href="theme.css">
+  <script src="theme.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -244,6 +248,7 @@
       <a href="#expertise">Expertise</a>
       <a href="#education">Education</a>
       <a class="profile-link" href="https://www.linkedin.com/in/dmytro-krasylnikov-5a0763a7" rel="me">LinkedIn ↗</a>
+      <button class="theme-toggle" type="button" aria-pressed="false" hidden>Matrix mode</button>
     </nav>
   </header>
 
