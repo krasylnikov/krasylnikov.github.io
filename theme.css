@@ -44,3 +44,43 @@
   .site-header .profile-link { padding-inline: 10px; }
 }
 @media print { .theme-toggle { display: none; } }
+
+@media screen {
+  :root[data-theme="lego"] {
+    color-scheme: light;
+    --ink: #172b4d;
+    --muted: #3d4c61;
+    --paper: #fff8df;
+    --card: #ffffff;
+    --accent: #b21f24;
+    --accent-bright: #ffdf52;
+    --aqua: #ffcf00;
+    --line: #172b4d;
+    --display: "Arial Black", "Trebuchet MS", sans-serif;
+    --body: "Trebuchet MS", Arial, sans-serif;
+  }
+  [data-theme="lego"] body { color: var(--ink); background: var(--paper); font-family: var(--body); }
+  [data-theme="lego"] .site-header { background: #ffcf00; border-bottom: 4px solid var(--ink); }
+  [data-theme="lego"] h1, [data-theme="lego"] h2 { font-family: var(--display); font-weight: 900; letter-spacing: -.045em; }
+  [data-theme="lego"] h1 span { font-style: normal; }
+  [data-theme="lego"] .hero::before { border: 0; border-radius: 12px; background: #ffcf00; background-image: radial-gradient(circle at center, #ffe46b 0 10px, #cba400 11px 13px, transparent 14px); background-size: 48px 48px; }
+  [data-theme="lego"] .hero-note, [data-theme="lego"] .quote,
+  [data-theme="lego"] .school { border: 3px solid var(--ink); border-radius: 8px; box-shadow: 6px 6px 0 var(--ink); background: var(--card); }
+  [data-theme="lego"] .quote { background: #ffcf00; }
+  [data-theme="lego"] .button, [data-theme="lego"] .skill-list li,
+  [data-theme="lego"] .theme-toggle, [data-theme="lego"] .profile-link { border: 2px solid var(--ink); border-radius: 6px; box-shadow: 3px 3px 0 var(--ink); }
+  [data-theme="lego"] .button.primary { color: #fff; background: #b21f24; }
+  [data-theme="lego"] .button:hover { color: #fff; background: #0755a1; }
+  [data-theme="lego"] .band { color: #fff; background: #0755a1; }
+  [data-theme="lego"] .band .section-label { color: #ffdf52; }
+  [data-theme="lego"] .job time, [data-theme="lego"] .job .place,
+  [data-theme="lego"] .job p { color: #fff; }
+  [data-theme="lego"] .job .company { color: #ffdf52; }
+  [data-theme="lego"] .job { border-color: #77abe0; }
+  [data-theme="lego"] .school p, [data-theme="lego"] .updated { color: var(--muted); }
+  [data-theme="lego"] footer { color: #fff; background: #b21f24; }
+  [data-theme="lego"] footer .section-label { color: #ffdf52; }
+  [data-theme="lego"] main > p a, [data-theme="lego"] header > a { color: #0755a1; }
+  [data-theme="lego"] a:focus-visible { outline-color: #172b4d; }
+  [data-theme="lego"] .band a:focus-visible, [data-theme="lego"] footer a:focus-visible { outline-color: #ffdf52; }
+}
