@@ -4,7 +4,7 @@ A lightweight, single-page portfolio for software engineer Dmytro Krasylnikov. T
 
 ## Overview
 
-The portfolio is a static website built with semantic HTML and embedded CSS. A small JavaScript theme switch lets visitors choose between noir grayscale and Matrix black/green, remembering their choice in local storage. It has no package manager, build step, or third-party runtime dependencies.
+The portfolio is a static website built with semantic HTML and embedded CSS. A small JavaScript theme switch lets visitors choose between noir grayscale, Matrix black/green, a colorful Lego-inspired brick style, a metallic Transformers-inspired style, and a rustic farm palette, remembering their choice in local storage. It has no package manager, build step, or third-party runtime dependencies.
 
 Highlights include:
 
