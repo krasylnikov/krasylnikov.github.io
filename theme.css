@@ -84,3 +84,81 @@
   [data-theme="lego"] a:focus-visible { outline-color: #172b4d; }
   [data-theme="lego"] .band a:focus-visible, [data-theme="lego"] footer a:focus-visible { outline-color: #ffdf52; }
 }
+
+@media screen {
+  :root[data-theme="transformers"] {
+    --ink: #edf4fc;
+    --muted: #b1c2d5;
+    --paper: #101925;
+    --card: #202f42;
+    --accent: #ff8e89;
+    --accent-bright: #80d9ff;
+    --aqua: #142a43;
+    --line: #526d88;
+    --display: "Arial Black", "Trebuchet MS", sans-serif;
+    --body: "Trebuchet MS", Arial, sans-serif;
+  }
+  [data-theme="transformers"] body { color: var(--ink); background: var(--paper); font-family: var(--body); }
+  [data-theme="transformers"] .site-header { background: linear-gradient(135deg, #293c51, #101925 70%); border-bottom: 3px solid #d03b40; }
+  [data-theme="transformers"] h1, [data-theme="transformers"] h2 { font-family: var(--display); font-weight: 900; letter-spacing: -.045em; }
+  [data-theme="transformers"] h1 span { font-style: normal; color: #80d9ff; text-shadow: 0 3px 0 #153e62; }
+  [data-theme="transformers"] .hero::before { border: 2px solid #526d88; border-radius: 0; transform: rotate(30deg); background: repeating-linear-gradient(90deg, transparent 0 46px, #526d8833 47px 48px), linear-gradient(135deg, #233e5d, #101925); }
+  [data-theme="transformers"] .hero-note, [data-theme="transformers"] .quote,
+  [data-theme="transformers"] .school { background: linear-gradient(135deg, #2b4058, #182637); border: 1px solid var(--line); border-top: 4px solid #80d9ff; border-radius: 2px; box-shadow: 5px 5px 0 #080f18; }
+  [data-theme="transformers"] .quote { border-left: 5px solid #d03b40; }
+  [data-theme="transformers"] .button, [data-theme="transformers"] .profile-link,
+  [data-theme="transformers"] .theme-toggle, [data-theme="transformers"] .skill-list li { border-radius: 3px; border-color: var(--line); }
+  [data-theme="transformers"] .button.primary { color: #fff; background: #a9232b; border-color: #ff8e89; }
+  [data-theme="transformers"] .button:hover { color: #fff; background: #185580; border-color: #80d9ff; }
+  [data-theme="transformers"] .band { color: var(--ink); background: #0b1420; border-block: 2px solid #526d88; }
+  [data-theme="transformers"] .job { border-color: var(--line); }
+  [data-theme="transformers"] .job time, [data-theme="transformers"] .job .place,
+  [data-theme="transformers"] .job p, [data-theme="transformers"] .school p,
+  [data-theme="transformers"] .updated { color: var(--muted); }
+  [data-theme="transformers"] .job .company { color: #80d9ff; }
+  [data-theme="transformers"] footer { color: var(--ink); background: linear-gradient(135deg, #3c1723, #101925 75%); border-top: 4px solid #d03b40; }
+  [data-theme="transformers"] main > p a, [data-theme="transformers"] header > a { color: #80d9ff; }
+  [data-theme="transformers"] a:focus-visible { outline-color: #80d9ff; }
+}
+
+@media screen {
+  :root[data-theme="farm"] {
+    color-scheme: light;
+    --ink: #293d27;
+    --muted: #566247;
+    --paper: #f8f1df;
+    --card: #fffbef;
+    --accent: #804127;
+    --accent-bright: #f1d494;
+    --aqua: #e0e7c5;
+    --line: #a3ae83;
+    --display: Georgia, "Times New Roman", serif;
+    --body: "Trebuchet MS", Arial, sans-serif;
+  }
+  [data-theme="farm"] body { color: var(--ink); background: var(--paper); font-family: var(--body); }
+  [data-theme="farm"] .site-header { background: rgba(248, 241, 223, .96); border-bottom: 2px solid var(--line); }
+  [data-theme="farm"] h1, [data-theme="farm"] h2 { font-family: var(--display); }
+  [data-theme="farm"] h1 span { color: #496b35; }
+  [data-theme="farm"] .hero::before { border: 2px solid #acb780; background: repeating-linear-gradient(155deg, #d5dfb5 0 18px, #b7cb90 19px 23px); border-radius: 48% 48% 12% 12%; }
+  [data-theme="farm"] .hero-note, [data-theme="farm"] .school {
+    background: var(--card); border: 1px solid var(--line); border-radius: 8px; box-shadow: 4px 5px 0 #d7cfb7;
+  }
+  [data-theme="farm"] .hero-note { border-top: 5px solid #804127; }
+  [data-theme="farm"] .button, [data-theme="farm"] .profile-link,
+  [data-theme="farm"] .theme-toggle { border-radius: 8px; }
+  [data-theme="farm"] .button.primary { color: #fffbef; background: #3e5a32; border-color: #3e5a32; }
+  [data-theme="farm"] .button:hover { color: #fffbef; background: #804127; border-color: #804127; }
+  [data-theme="farm"] .band { color: #fffbef; background: #30472c; border-block: 5px double #98ad77; }
+  [data-theme="farm"] .job { border-color: #91a77d; }
+  [data-theme="farm"] .job time, [data-theme="farm"] .job .place,
+  [data-theme="farm"] .job p { color: #dee8cb; }
+  [data-theme="farm"] .job .company { color: #f1d494; }
+  [data-theme="farm"] .skill-list li { border-color: #a3ae83; }
+  [data-theme="farm"] .quote { background: #eee0b9; border-left-color: #804127; border-radius: 0 12px 12px 0; }
+  [data-theme="farm"] .school p, [data-theme="farm"] .updated { color: var(--muted); }
+  [data-theme="farm"] footer { color: #fffbef; background: #653b2b; border-top: 5px double #d3b98d; }
+  [data-theme="farm"] footer .section-label { color: #f1d494; }
+  [data-theme="farm"] main > p a, [data-theme="farm"] header > a { color: #804127; }
+  [data-theme="farm"] a:focus-visible { outline-color: #804127; }
+  [data-theme="farm"] .band a:focus-visible, [data-theme="farm"] footer a:focus-visible { outline-color: #f1d494; }
+}
