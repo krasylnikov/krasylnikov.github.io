@@ -162,3 +162,44 @@
   [data-theme="farm"] a:focus-visible { outline-color: #804127; }
   [data-theme="farm"] .band a:focus-visible, [data-theme="farm"] footer a:focus-visible { outline-color: #f1d494; }
 }
+
+@media screen {
+  :root[data-theme="newspaper"] {
+    color-scheme: light;
+    --ink: #24221e;
+    --muted: #615c52;
+    --paper: #f4efdf;
+    --card: #faf6e9;
+    --accent: #494338;
+    --accent-bright: #494338;
+    --aqua: #e8e1cf;
+    --line: #aaa18d;
+    --display: Georgia, "Times New Roman", serif;
+    --body: Georgia, "Times New Roman", serif;
+  }
+  [data-theme="newspaper"] body { color: var(--ink); background: var(--paper); font-family: var(--body); }
+  [data-theme="newspaper"] .site-header { background: rgba(244, 239, 223, .96); border-block: 4px double var(--ink); }
+  [data-theme="newspaper"] .monogram { border-radius: 0; border-width: 2px; }
+  [data-theme="newspaper"] h1, [data-theme="newspaper"] h2 { font-family: var(--display); font-weight: 700; }
+  [data-theme="newspaper"] h1 span { color: var(--ink); }
+  [data-theme="newspaper"] .hero::before { display: none; }
+  [data-theme="newspaper"] .hero { border-bottom: 4px double var(--ink); }
+  [data-theme="newspaper"] .eyebrow, [data-theme="newspaper"] .section-label { color: var(--muted); }
+  [data-theme="newspaper"] .hero-note { background: transparent; border: 1px solid var(--line); border-top: 4px double var(--ink); }
+  [data-theme="newspaper"] .button, [data-theme="newspaper"] .profile-link,
+  [data-theme="newspaper"] .theme-toggle, [data-theme="newspaper"] .skill-list li { border-radius: 0; border-color: var(--ink); }
+  [data-theme="newspaper"] .band { color: var(--ink); background: var(--paper); }
+  [data-theme="newspaper"] .band .section-label { color: var(--muted); }
+  [data-theme="newspaper"] .job { border-color: var(--line); }
+  [data-theme="newspaper"] .job time, [data-theme="newspaper"] .job .place,
+  [data-theme="newspaper"] .job p, [data-theme="newspaper"] .school p,
+  [data-theme="newspaper"] .updated { color: var(--muted); }
+  [data-theme="newspaper"] .job .company { color: var(--ink); }
+  [data-theme="newspaper"] .quote { background: transparent; border-left: 3px double var(--ink); border-block: 1px solid var(--line); }
+  [data-theme="newspaper"] .education { border-block: 4px double var(--ink); }
+  [data-theme="newspaper"] .school { background: var(--card); border: 1px solid var(--line); }
+  [data-theme="newspaper"] footer { color: var(--ink); background: var(--paper); border-top: 4px double var(--ink); }
+  [data-theme="newspaper"] .copyright { border-color: var(--line); }
+  [data-theme="newspaper"] main > p a, [data-theme="newspaper"] header > a { color: var(--ink); }
+  [data-theme="newspaper"] a:focus-visible { outline-color: var(--ink); }
+}
